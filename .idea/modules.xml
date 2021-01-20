@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/schedule-manager.iml" filepath="$PROJECT_DIR$/schedule-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" filepath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" filepath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" filepath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" />
     </modules>
   </component>
 </project>
