@@ -5,23 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/DatabaseModuleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/School.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/ClassroomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SchoolRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nulp/ystan/schedule/ScheduleManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nulp/ystan/schedule/ScheduleManagerApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +31,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -54,12 +62,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/schedule-manager-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/schedule-manager-db/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -68,10 +81,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Spring Studying\projects\schedule-manager\schedule-manager-db\src\main\resources" />
       <recent name="F:\Spring Studying\projects\schedule-manager\schedule-manager-api" />
       <recent name="F:\Spring Studying\projects\schedule-manager\schedule-manager-impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Spring Studying\projects\schedule-manager\schedule-manager-db\src\main\resources" />
       <recent name="F:\Spring Studying\projects\schedule-manager\schedule-manager-impl\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -118,7 +133,9 @@
       <updated>1609182445940</updated>
       <workItem from="1609182450370" duration="1243000" />
       <workItem from="1610809837499" duration="773000" />
-      <workItem from="1610885422118" duration="6651000" />
+      <workItem from="1610885422118" duration="13948000" />
+      <workItem from="1611175326224" duration="2050000" />
+      <workItem from="1611262494466" duration="6429000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -141,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609182795381</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Separated app in three modules [api, impl, db]. Configured postgresql.">
+      <created>1611146054626</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611146054627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,8 +184,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updated gitignore." />
     <MESSAGE value="Initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit." />
+    <MESSAGE value="Separated app in three modules [api, impl, db]. Configured postgresql." />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated app in three modules [api, impl, db]. Configured postgresql." />
   </component>
 </project>
