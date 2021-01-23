@@ -18,9 +18,11 @@ public class Schedule {
 
     @OneToOne(
             fetch = FetchType.LAZY,
-            mappedBy = "schedule",
-            cascade = CascadeType.PERSIST,
-            optional = false
+            cascade = CascadeType.PERSIST
+    )
+    @JoinColumn(
+            name = "groupId",
+            referencedColumnName = "id"
     )
     private Group group;
 }

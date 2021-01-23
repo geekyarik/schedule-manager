@@ -1,6 +1,5 @@
 package com.ystan.schedule.models;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
@@ -31,8 +30,11 @@ public class Group {
 
     @OneToOne(
             cascade = CascadeType.PERSIST,
-            fetch = FetchType.LAZY,
-            mappedBy = "group"
+            fetch = FetchType.LAZY
+    )
+    @JoinColumn(
+            name = "scheduleId",
+            referencedColumnName = "id"
     )
     private Schedule schedule;
 

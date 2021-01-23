@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Added School.java and repo.&#10;Projects works, tables create.">
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Lesson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Schedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/GroupRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/TeacherRepository.java" afterDir="false" />
+    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Schedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +123,7 @@
       <workItem from="1610809837499" duration="773000" />
       <workItem from="1610885422118" duration="13948000" />
       <workItem from="1611175326224" duration="2050000" />
-      <workItem from="1611262494466" duration="11208000" />
+      <workItem from="1611262494466" duration="11745000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -168,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611316997154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Schedule.java, Lesson.java and repos.">
+      <created>1611417581542</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611417581542</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +191,7 @@
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Separated app in three modules [api, impl, db]. Configured postgresql." />
     <MESSAGE value="Added School.java and repo.&#10;Projects works, tables create." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added School.java and repo.&#10;Projects works, tables create." />
+    <MESSAGE value="Added Schedule.java, Lesson.java and repos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Schedule.java, Lesson.java and repos." />
   </component>
 </project>

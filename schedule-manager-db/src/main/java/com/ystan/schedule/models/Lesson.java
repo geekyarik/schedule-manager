@@ -1,6 +1,5 @@
 package com.ystan.schedule.models;
 
-
 import lombok.Data;
 
 import javax.persistence.*;
