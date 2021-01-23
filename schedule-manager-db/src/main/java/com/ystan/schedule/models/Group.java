@@ -1,19 +1,20 @@
 package com.ystan.schedule.models;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
 
-import static com.ystan.schedule.models.Classroom.TABLE_NAME;
+import static com.ystan.schedule.models.School.TABLE_NAME;
 
 @Data
 @Entity
 @Table(name = TABLE_NAME)
-public class Classroom {
+public class Group {
 
-    public static final String TABLE_NAME = "SM_CLASSROOM";
+    public static final String TABLE_NAME = "SM_GROUP";
 
     @Id
     private String id;
@@ -28,11 +29,18 @@ public class Classroom {
     )
     private School school;
 
-    @JsonIgnore
-    @OneToMany(
-            mappedBy = "classroom",
+    @OneToOne(
+            cascade = CascadeType.PERSIST,
             fetch = FetchType.LAZY,
-            cascade = CascadeType.PERSIST
+            mappedBy = "group"
     )
+    private Schedule schedule;
+
+    @OneToMany(
+            cascade = CascadeType.PERSIST,
+            fetch = FetchType.LAZY,
+            mappedBy = "group"
+    )
+    @JsonIgnore
     private List<Lesson> lessons;
 }

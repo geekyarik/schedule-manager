@@ -6,14 +6,14 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-import static com.ystan.schedule.models.Classroom.TABLE_NAME;
+import static com.ystan.schedule.models.Subject.TABLE_NAME;
 
 @Data
 @Entity
 @Table(name = TABLE_NAME)
-public class Classroom {
+public class Subject {
 
-    public static final String TABLE_NAME = "SM_CLASSROOM";
+    public static final String TABLE_NAME = "SM_SUBJECT";
 
     @Id
     private String id;
@@ -21,18 +21,19 @@ public class Classroom {
     @Column(unique = true)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(
-            name = "schoolId",
-            referencedColumnName = "id"
+    @ManyToMany
+    @JoinTable(
+            name = "SM_SUBJ_TEACH",
+            joinColumns = @JoinColumn(name = "subjectId"),
+            inverseJoinColumns = @JoinColumn(name = "teacherId")
     )
-    private School school;
+    private List<Teacher> teachers;
 
-    @JsonIgnore
     @OneToMany(
-            mappedBy = "classroom",
+            mappedBy = "subject",
             fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST
     )
+    @JsonIgnore
     private List<Lesson> lessons;
 }

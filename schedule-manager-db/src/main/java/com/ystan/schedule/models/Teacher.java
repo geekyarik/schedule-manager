@@ -6,33 +6,46 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-import static com.ystan.schedule.models.Classroom.TABLE_NAME;
+import static com.ystan.schedule.models.Teacher.TABLE_NAME;
 
 @Data
 @Entity
 @Table(name = TABLE_NAME)
-public class Classroom {
+public class Teacher {
 
-    public static final String TABLE_NAME = "SM_CLASSROOM";
+    public static final String TABLE_NAME = "SM_TEACHER";
 
     @Id
     private String id;
 
-    @Column(unique = true)
-    private String name;
+    @Column
+    private String firstName;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @Column
+    private String middleName;
+
+    @Column
+    private String lastName;
+
+    @Column(unique = true)
+    private String email;
+
+    @ManyToOne
     @JoinColumn(
             name = "schoolId",
             referencedColumnName = "id"
     )
     private School school;
 
+    @ManyToMany(mappedBy = "teachers")
     @JsonIgnore
+    private List<Subject> subjects;
+
     @OneToMany(
-            mappedBy = "classroom",
             fetch = FetchType.LAZY,
+            mappedBy = "teacher",
             cascade = CascadeType.PERSIST
     )
+    @JsonIgnore
     private List<Lesson> lessons;
 }

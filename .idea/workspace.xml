@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/DatabaseModuleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/School.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/ClassroomRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SchoolRepository.java" afterDir="false" />
+    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Added School.java and repo.&#10;Projects works, tables create.">
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Lesson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/GroupRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/TeacherRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/School.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,6 +85,7 @@
       <recent name="F:\Spring Studying\projects\schedule-manager\schedule-manager-impl\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ystan.schedule.repositories" />
       <recent name="com.nulp.ystan.schedule" />
       <recent name="schedule" />
     </key>
@@ -135,7 +131,7 @@
       <workItem from="1610809837499" duration="773000" />
       <workItem from="1610885422118" duration="13948000" />
       <workItem from="1611175326224" duration="2050000" />
-      <workItem from="1611262494466" duration="6429000" />
+      <workItem from="1611262494466" duration="11208000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -165,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611146054627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added School.java and repo.&#10;Projects works, tables create.">
+      <created>1611316997154</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611316997154</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +191,7 @@
     <MESSAGE value="Updated gitignore." />
     <MESSAGE value="Initial commit." />
     <MESSAGE value="Separated app in three modules [api, impl, db]. Configured postgresql." />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated app in three modules [api, impl, db]. Configured postgresql." />
+    <MESSAGE value="Added School.java and repo.&#10;Projects works, tables create." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added School.java and repo.&#10;Projects works, tables create." />
   </component>
 </project>

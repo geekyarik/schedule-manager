@@ -31,4 +31,20 @@ public class School {
     )
     @JsonIgnore
     private List<Classroom> classrooms;
+
+    @OneToMany(
+            mappedBy = "school",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST
+    )
+    @JsonIgnore
+    private List<Teacher> teachers;
+
+    @OneToMany(
+            mappedBy = "school",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST
+    )
+    @JsonIgnore
+    private List<Group> groups;
 }
