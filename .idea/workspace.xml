@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/common/CRUDService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/ClassroomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-models/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-models/schedule-manager-models.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/ModelsModuleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/Rule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/models/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/DatabaseModuleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/DatabaseModuleConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +137,7 @@
       <workItem from="1610809837499" duration="773000" />
       <workItem from="1610885422118" duration="13948000" />
       <workItem from="1611175326224" duration="2050000" />
-      <workItem from="1611262494466" duration="11745000" />
+      <workItem from="1611262494466" duration="14241000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -167,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611417581542</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adjusted OtO relation">
+      <created>1611418139724</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611418139724</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +213,7 @@
     <MESSAGE value="Separated app in three modules [api, impl, db]. Configured postgresql." />
     <MESSAGE value="Added School.java and repo.&#10;Projects works, tables create." />
     <MESSAGE value="Added Schedule.java, Lesson.java and repos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Schedule.java, Lesson.java and repos." />
+    <MESSAGE value="Adjusted OtO relation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted OtO relation" />
   </component>
 </project>
