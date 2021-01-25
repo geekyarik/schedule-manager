@@ -2,6 +2,7 @@ package com.ystan.schedule.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,6 +17,8 @@ public class School {
     public static final String TABLE_NAME = "SM_SCHOOL";
 
     @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
 
     @Column(unique = true)

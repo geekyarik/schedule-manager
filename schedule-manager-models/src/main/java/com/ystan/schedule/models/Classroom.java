@@ -2,6 +2,7 @@ package com.ystan.schedule.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,6 +17,8 @@ public class Classroom {
     public static final String TABLE_NAME = "SM_CLASSROOM";
 
     @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
 
     @Column(unique = true)
@@ -24,8 +27,10 @@ public class Classroom {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(
             name = "schoolId",
-            referencedColumnName = "id"
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "FK_CLASSROOM_TO_SCHOOL")
     )
+    @JsonIgnore
     private School school;
 
     @JsonIgnore

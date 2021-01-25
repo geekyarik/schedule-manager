@@ -1,6 +1,7 @@
 package com.ystan.schedule.models;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -14,6 +15,8 @@ public class Schedule {
     public static final String TABLE_NAME = "SM_SCHEDULE";
 
     @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
 
     @OneToOne(
@@ -22,7 +25,8 @@ public class Schedule {
     )
     @JoinColumn(
             name = "groupId",
-            referencedColumnName = "id"
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "FK_SCHEDULE_TO_GROUP")
     )
     private Group group;
 }

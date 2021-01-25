@@ -12,7 +12,7 @@
     <dependencies>
         <dependency>
             <groupId>com.nulp.ystan</groupId>
-            <artifactId>schedule-manager-db</artifactId>
+            <artifactId>schedule-manager-models</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
