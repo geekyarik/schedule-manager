@@ -3,9 +3,7 @@ package com.ystan.schedule.mappers;
 import com.ystan.schedule.mappers.common.EntityMapper;
 import com.ystan.schedule.models.School;
 import com.ystan.schedule.models.SchoolDTO;
-import com.ystan.schedule.repositories.SchoolRepository;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -4,7 +4,6 @@ import com.ystan.schedule.mappers.TeacherMapper;
 import com.ystan.schedule.models.Teacher;
 import com.ystan.schedule.models.TeacherDTO;
 import com.ystan.schedule.repositories.TeacherRepository;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

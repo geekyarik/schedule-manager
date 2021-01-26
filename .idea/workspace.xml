@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/ClassroomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/ClassroomServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/GroupServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SchoolServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SchoolServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/TeacherDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/TeacherDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/SubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/SubjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/SchoolMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/SchoolMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/TeacherServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +138,7 @@
       <workItem from="1610885422118" duration="13948000" />
       <workItem from="1611175326224" duration="2050000" />
       <workItem from="1611262494466" duration="18407000" />
-      <workItem from="1611600956238" duration="18567000" />
+      <workItem from="1611600956238" duration="20743000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611618861239</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added SLF4J logging in services.">
+      <created>1611643881222</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611643881222</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +246,8 @@
     <MESSAGE value="Started to implement api module. Created separate module for models." />
     <MESSAGE value="Moved models into separate module." />
     <MESSAGE value="Added DTOs, Mappers, Service Impls, Controllers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DTOs, Mappers, Service Impls, Controllers." />
+    <MESSAGE value="Added SLF4J logging in services." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added SLF4J logging in services." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
