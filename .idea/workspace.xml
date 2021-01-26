@@ -5,59 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/ClassroomDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/GroupDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/LessonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/SchoolDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/SubjectDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/TeacherDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/common/DateTimeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/models/common/EntityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/GroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/LessonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/SchoolService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/SubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/TeacherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/common/FindEntityByIdFunc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/RuleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/ClassroomControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/GroupControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/LessonControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/SchoolControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/SubjectControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/TeacherControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/ClassroomMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/GroupMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/LessonMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/SchoolMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/SubjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/TeacherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/mappers/common/EntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/ClassroomServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/GroupServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SchoolServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/TeacherServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/common/CRUDService.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/common/CRUDService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/ClassroomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/ClassroomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/ClassroomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/ClassroomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/GroupRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/LessonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Classroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Lesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Rule.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Rule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/School.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/models/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/ClassroomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/ClassroomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/GroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SchoolServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SchoolServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/TeacherServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +139,7 @@
       <workItem from="1610885422118" duration="13948000" />
       <workItem from="1611175326224" duration="2050000" />
       <workItem from="1611262494466" duration="18407000" />
-      <workItem from="1611600956238" duration="17374000" />
+      <workItem from="1611600956238" duration="18567000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -250,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611514176532</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added DTOs, Mappers, Service Impls, Controllers.">
+      <created>1611618861239</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611618861239</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,14 +239,15 @@
     <MESSAGE value="Adjusted OtO relation" />
     <MESSAGE value="Started to implement api module. Created separate module for models." />
     <MESSAGE value="Moved models into separate module." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved models into separate module." />
+    <MESSAGE value="Added DTOs, Mappers, Service Impls, Controllers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DTOs, Mappers, Service Impls, Controllers." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/ClassroomServiceImpl.java</url>
-          <line>24</line>
+          <line>26</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
