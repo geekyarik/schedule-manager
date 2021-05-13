@@ -1,0 +1,16 @@
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/ClassroomDTO.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/common/DateTimeUtils.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/ClassroomService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/SubjectService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/GroupService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/SubjectDTO.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/SchoolService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/common/CRUDService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/TeacherService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/GroupDTO.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/SchoolDTO.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/LessonService.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/services/common/FindEntityByIdFunc.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/LessonDTO.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/common/EntityDTO.java
+/Users/emalysh/Personal/Projects/schedule-manager/schedule-manager-api/src/main/java/com/ystan/schedule/models/TeacherDTO.java

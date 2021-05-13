@@ -1,0 +1,31 @@
+<section>
+  <form class="login-form" [formGroup]="loginForm">
+    <h3>
+      <span>Sign In or</span>
+      <span
+        class="register-label"
+        (click)="openRegistrationForm()"
+      >
+        Register
+      </span>
+    </h3>
+    <mat-form-field class="">
+      <mat-label>Email address</mat-label>
+      <input matInput type="email" formControlName="username" required>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required>
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      color="primary"
+      [disabled]="loginForm.invalid"
+      (click)="login()"
+    >
+      Login
+    </button>
+  </form>
+</section>
