@@ -14,9 +14,9 @@ import java.util.List;
 @RequestMapping("schedule")
 public class ClassroomControllerImpl {
 
-    @Autowired
-    private ClassroomService classroomService;
+    private final ClassroomService classroomService;
 
+    @Autowired
     public ClassroomControllerImpl(ClassroomService classroomService) {
         this.classroomService = classroomService;
     }

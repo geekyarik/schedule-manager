@@ -24,6 +24,7 @@
         <module>schedule-manager-api</module>
         <module>schedule-manager-impl</module>
         <module>schedule-manager-models</module>
+        <module>schedule-manager-principal</module>
     </modules>
 
     <dependencies>
