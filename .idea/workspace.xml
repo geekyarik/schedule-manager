@@ -4,55 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Added spring security. Separated database module configuration in properties file.">
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/MvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/components/Registration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/webapp/WEB-INF/view/react/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/schedule-manager-principal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/PrincipalModuleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/components/UserPrincipalComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/filters/JSONWebTokenRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/models/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/repositories/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/security/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/security/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/security/JSONWebTokenUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/resources/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/security/RegistrationRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/schedule-manager-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/schedule-manager-db.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/schedule-manager-impl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/ScheduleManagerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/ClassroomControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/ClassroomControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-models/schedule-manager-models.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-models/schedule-manager-models.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/components/UserPrincipalComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/components/UserPrincipalComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/repositories/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +149,7 @@
       <workItem from="1618258217454" duration="34000" />
       <workItem from="1618737737229" duration="14843000" />
       <workItem from="1619254010188" duration="5655000" />
-      <workItem from="1619262135442" duration="21042000" />
+      <workItem from="1619262135442" duration="24413000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -283,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613052578793</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added JWT support.">
+      <created>1620905346195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1620905346195</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +281,8 @@
     <MESSAGE value="Added SLF4J logging in services." />
     <MESSAGE value="Optimized code and imports." />
     <MESSAGE value="Added spring security. Separated database module configuration in properties file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added spring security. Separated database module configuration in properties file." />
+    <MESSAGE value="Added JWT support." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JWT support." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -337,8 +304,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/components/UserPrincipalComponent.java</url>
-          <line>37</line>
+          <line>40</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/components/UserPrincipalComponent.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/ModelsModuleConfig.java</url>

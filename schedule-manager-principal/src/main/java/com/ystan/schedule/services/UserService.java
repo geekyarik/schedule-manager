@@ -2,6 +2,7 @@ package com.ystan.schedule.services;
 
 import com.ystan.schedule.models.Role;
 import com.ystan.schedule.models.User;
+import com.ystan.schedule.repositories.RoleRepository;
 import com.ystan.schedule.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,6 +22,8 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private RoleRepository roleRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -50,7 +53,8 @@ public class UserService implements UserDetailsService {
             return false;
         }
         if (CollectionUtils.isEmpty(user.getRoles())) {
-            user.setRoles(Collections.singleton(new Role(UUID.randomUUID().toString(), "ROLE_USER")));
+            Role role_user = roleRepository.findByName("ROLE_TEACHER");
+            user.setRoles(Collections.singleton(role_user));
         }
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userRepository.save(user);

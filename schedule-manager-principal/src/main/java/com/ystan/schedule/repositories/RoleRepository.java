@@ -7,5 +7,5 @@ import javax.transaction.Transactional;
 
 @Transactional
 public interface RoleRepository extends JpaRepository<Role, String> {
-
+    Role findByName(String name);
 }

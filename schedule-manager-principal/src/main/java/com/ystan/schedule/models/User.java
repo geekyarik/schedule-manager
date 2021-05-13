@@ -1,6 +1,9 @@
 package com.ystan.schedule.models;
 
+import com.ystan.schedule.security.RegistrationRequest;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -51,6 +54,17 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "roleId")
     )
     private Set<Role> roles;
+
+    public static User fromRegistrationRequest(RegistrationRequest request) {
+        User user = new User();
+        user.setEmail(request.getEmail());
+        user.setPassword(request.getPassword());
+        user.setFirstName(request.getFirstName());
+        user.setMiddleName(request.getMiddleName());
+        user.setLastName(request.getLastName());
+
+        return user;
+    }
 
     public User(String email) {
         this.email = email;
@@ -117,5 +131,29 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

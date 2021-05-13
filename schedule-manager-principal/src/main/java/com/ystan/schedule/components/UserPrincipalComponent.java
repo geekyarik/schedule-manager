@@ -1,8 +1,11 @@
 package com.ystan.schedule.components;
 
+import com.ystan.schedule.models.User;
 import com.ystan.schedule.security.AuthRequest;
 import com.ystan.schedule.security.AuthResponse;
 import com.ystan.schedule.security.JSONWebTokenUtils;
+import com.ystan.schedule.security.RegistrationRequest;
+import com.ystan.schedule.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,11 +24,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserPrincipalComponent {
 
     private final AuthenticationManager authenticationManager;
-    private final UserDetailsService userDetailsService;
+    private final UserService userDetailsService;
     private final JSONWebTokenUtils jsonWebTokenUtils;
 
     @Autowired
-    public UserPrincipalComponent(AuthenticationManager authenticationManager, UserDetailsService userDetailsService, JSONWebTokenUtils jsonWebTokenUtils) {
+    public UserPrincipalComponent(AuthenticationManager authenticationManager, UserService userDetailsService, JSONWebTokenUtils jsonWebTokenUtils) {
         this.authenticationManager = authenticationManager;
         this.userDetailsService = userDetailsService;
         this.jsonWebTokenUtils = jsonWebTokenUtils;
@@ -43,6 +46,23 @@ public class UserPrincipalComponent {
         }
 
         final UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getUsername());
+        final String jwt = jsonWebTokenUtils.generateToken(userDetails);
+
+        return ResponseEntity.ok(new AuthResponse(jwt));
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public ResponseEntity<?> registerUser(@RequestBody RegistrationRequest registrationRequest) throws Exception {
+        try {
+            userDetailsService.saveUser(User.fromRegistrationRequest(registrationRequest));
+            authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(registrationRequest.getEmail(), registrationRequest.getPassword())
+            );
+        } catch (Exception e) {
+            throw new Exception("User with email already exists");
+        }
+
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(registrationRequest.getEmail());
         final String jwt = jsonWebTokenUtils.generateToken(userDetails);
 
         return ResponseEntity.ok(new AuthResponse(jwt));
