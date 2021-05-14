@@ -1,0 +1,55 @@
+<section>
+  <button
+    class="close"
+    mat-icon-button
+    color="primary"
+    (click)="close()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+  <h3 mat-dialog-title>Register</h3>
+  <form class="form" [formGroup]="form">
+    <mat-form-field class="">
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName" required>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Middle Name</mat-label>
+      <input matInput formControlName="middleName" required>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName" required>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Email address</mat-label>
+      <input matInput type="email" formControlName="email" required>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required>
+    </mat-form-field>
+
+    <footer mat-dialog-actions>
+      <button
+        mat-flat-button
+        color="primary"
+        [disabled]="form.invalid"
+        (click)="register()"
+      >
+        Register
+      </button>
+
+      <button
+        mat-flat-button
+        (click)="close()"
+      >
+        Cancel
+      </button>
+    </footer>
+  </form>
+</section>

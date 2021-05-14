@@ -1,0 +1,18 @@
+section {
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+
+footer {
+  justify-content: flex-end;
+}

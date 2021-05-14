@@ -1,0 +1,12 @@
+com/ystan/schedule/services/UserService.class
+com/ystan/schedule/repositories/UserRepository.class
+com/ystan/schedule/PrincipalModuleConfig.class
+com/ystan/schedule/models/User.class
+com/ystan/schedule/components/UserPrincipalComponent.class
+com/ystan/schedule/security/AuthResponse.class
+com/ystan/schedule/security/AuthRequest.class
+com/ystan/schedule/models/Role.class
+com/ystan/schedule/repositories/RoleRepository.class
+com/ystan/schedule/filters/JSONWebTokenRequestFilter.class
+com/ystan/schedule/security/RegistrationRequest.class
+com/ystan/schedule/security/JSONWebTokenUtils.class
