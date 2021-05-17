@@ -1,0 +1,49 @@
+:host {
+  ::ng-deep {
+    mat-tab-group {
+      height: 100%;
+
+      .mat-tab-body-wrapper {
+        height: 100%;
+      }
+
+      mat-tab-body {
+        height: 100%;
+
+        mat-list {
+          height: 100%;
+
+          mat-list-item {
+            padding: 20px!important;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+    }
+  }
+}
+
+.item-wrapper {
+  width: 100%;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+.admin-label {
+  background-color: #316c04;
+  color: white;
+  padding: 5px;
+  right: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.role {
+  position: relative;
+  right: 10px;
+}
