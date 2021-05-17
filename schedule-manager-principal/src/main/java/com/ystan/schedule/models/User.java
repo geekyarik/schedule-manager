@@ -17,7 +17,7 @@ import static javax.persistence.FetchType.EAGER;
 @Entity
 @Table(name = User.TABLE_NAME)
 @NoArgsConstructor
-public class User implements UserDetails {
+public class    User implements UserDetails {
 
     public static final String TABLE_NAME = "SEC_USER";
 

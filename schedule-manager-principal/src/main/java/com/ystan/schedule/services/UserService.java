@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -42,6 +45,12 @@ public class UserService implements UserDetailsService {
 
     public List<User> allUsers() {
         return userRepository.findAll();
+    }
+
+    private User populateRoles(User user) {
+        user.setRoles(roleRepository.findRoleByUsername(user.getEmail()));
+
+        return user;
     }
 
     public boolean saveUser(User user) {

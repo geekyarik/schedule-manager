@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -22,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Set;
 
 @Component
@@ -77,10 +77,24 @@ public class UserPrincipalComponent {
 
     @RequestMapping(value = "/principal", method = RequestMethod.GET)
     public ResponseEntity<?> principal() throws Exception {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String currentUsername = authentication.getName();
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String currentUsername;
+
+        if (principal instanceof UserDetails) {
+            currentUsername = ((UserDetails) principal).getUsername();
+        } else {
+            currentUsername = principal.toString();
+        }
+
         Set<Role> roles = roleService.getUserRoles(currentUsername);
 
         return ResponseEntity.ok(roles);
+    }
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public ResponseEntity<?> getAllUsers() throws Exception {
+        List<User> users = userDetailsService.allUsers();
+
+        return ResponseEntity.ok(users);
     }
 }
