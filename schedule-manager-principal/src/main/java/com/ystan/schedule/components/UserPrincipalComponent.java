@@ -1,23 +1,28 @@
 package com.ystan.schedule.components;
 
+import com.ystan.schedule.models.Role;
 import com.ystan.schedule.models.User;
 import com.ystan.schedule.security.AuthRequest;
 import com.ystan.schedule.security.AuthResponse;
 import com.ystan.schedule.security.JSONWebTokenUtils;
 import com.ystan.schedule.security.RegistrationRequest;
+import com.ystan.schedule.services.RoleService;
 import com.ystan.schedule.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Set;
 
 @Component
 @RestController
@@ -26,12 +31,14 @@ public class UserPrincipalComponent {
     private final AuthenticationManager authenticationManager;
     private final UserService userDetailsService;
     private final JSONWebTokenUtils jsonWebTokenUtils;
+    private final RoleService roleService;
 
     @Autowired
-    public UserPrincipalComponent(AuthenticationManager authenticationManager, UserService userDetailsService, JSONWebTokenUtils jsonWebTokenUtils) {
+    public UserPrincipalComponent(AuthenticationManager authenticationManager, UserService userDetailsService, JSONWebTokenUtils jsonWebTokenUtils, RoleService roleService) {
         this.authenticationManager = authenticationManager;
         this.userDetailsService = userDetailsService;
         this.jsonWebTokenUtils = jsonWebTokenUtils;
+        this.roleService = roleService;
     }
 
     @RequestMapping(value = "/auth", method = RequestMethod.POST)
@@ -66,5 +73,14 @@ public class UserPrincipalComponent {
         final String jwt = jsonWebTokenUtils.generateToken(userDetails);
 
         return ResponseEntity.ok(new AuthResponse(jwt));
+    }
+
+    @RequestMapping(value = "/principal", method = RequestMethod.GET)
+    public ResponseEntity<?> principal() throws Exception {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUsername = authentication.getName();
+        Set<Role> roles = roleService.getUserRoles(currentUsername);
+
+        return ResponseEntity.ok(roles);
     }
 }

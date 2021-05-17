@@ -5,8 +5,12 @@ import com.ystan.schedule.models.School;
 import com.ystan.schedule.models.SchoolDTO;
 import com.ystan.schedule.repositories.SchoolRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.util.Sets;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Slf4j
 @Service
@@ -38,5 +42,12 @@ public class SchoolServiceImpl implements SchoolService {
     @Override
     public School findEntityById(String id) {
         return schoolRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Set<SchoolDTO> getAll() {
+        HashSet<SchoolDTO> resultsSet = new HashSet<>();
+        schoolRepository.findAll().stream().map(schoolMapper::toDto).forEach(resultsSet::add);
+        return resultsSet;
     }
 }

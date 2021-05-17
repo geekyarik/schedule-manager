@@ -12,10 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -69,5 +66,9 @@ public class UserService implements UserDetailsService {
         }
 
         return false;
+    }
+
+    public Set<Role> getUserRoles(String username) {
+        return roleRepository.findRoleByUsername(username);
     }
 }
