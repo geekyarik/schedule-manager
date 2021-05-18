@@ -97,4 +97,11 @@ public class UserPrincipalComponent {
 
         return ResponseEntity.ok(users);
     }
+
+    @RequestMapping(value = "/role", method = RequestMethod.POST)
+    public ResponseEntity<?> editRole(String username, String roleId, boolean enable) throws Exception {
+        roleService.editUsersRole(username, roleId, enable);
+
+        return ResponseEntity.ok(username);
+    }
 }
