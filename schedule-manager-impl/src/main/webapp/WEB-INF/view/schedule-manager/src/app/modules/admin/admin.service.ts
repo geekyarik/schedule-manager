@@ -28,10 +28,14 @@ export class AdminService {
 
   setAdmin(user: any) {
     const body = {
-      userId: user.email,
-      roleId: 1,
+      username: user.email,
+      roleId: 2,
       enable: true
     };
     return this.http.post('http://localhost:8080/role', body);
+  }
+
+  createSchool(body: { name: string, address: string, id?: string }) {
+    return this.http.post('http://localhost:8080/schedule/school', body);
   }
 }

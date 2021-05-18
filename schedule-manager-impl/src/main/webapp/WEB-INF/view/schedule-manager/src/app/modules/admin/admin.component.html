@@ -1,5 +1,48 @@
 <mat-tab-group>
-  <mat-tab label="Schools"> SCHOOLS </mat-tab>
+  <mat-tab label="Schools">
+    <section class="school-container">
+      <section *ngIf="school; else addSchool" class="school">
+        <div class="school-data">
+          <div class="name">Name: {{ school?.name }}</div>
+          <div class="address">Address: {{ school?.address }}</div>
+        </div>
+
+        <div class="edit">
+          <button
+            mat-flat-button
+            color="primary"
+            [disabled]="showAddSchoolForm"
+            (click)="openSchoolForm()"
+          >
+            Edit School
+          </button>
+        </div>
+      </section>
+
+      <section *ngIf="showAddSchoolForm" class="school-form-container">
+        <form [formGroup]="schoolForm" class="school-form">
+          <mat-form-field class="">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+          </mat-form-field>
+          <mat-form-field class="">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="address" required>
+          </mat-form-field>
+
+          <button
+            mat-flat-button
+            color="primary"
+            [disabled]="schoolForm.invalid"
+            (click)="createSchool()"
+          >
+            Save
+          </button>
+        </form>
+      </section>
+    </section>
+  </mat-tab>
+
   <mat-tab label="Users">
     <ng-template matTabContent>
       <mat-list role="list">
@@ -33,4 +76,16 @@
 
 <ng-template #admin>
   <div class="admin-label">ADMIN</div>
+</ng-template>
+
+<ng-template #addSchool>
+  <section *ngIf="!showAddSchoolForm" class="add-school">
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="openSchoolForm()"
+    >
+      Add School
+    </button>
+  </section>
 </ng-template>

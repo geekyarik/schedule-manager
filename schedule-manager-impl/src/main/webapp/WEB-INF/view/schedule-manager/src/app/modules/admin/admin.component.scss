@@ -37,7 +37,7 @@
 .admin-label {
   background-color: #316c04;
   color: white;
-  padding: 5px;
+  padding: 8px 25px;
   right: 10px;
   position: relative;
   border-radius: 5px;
@@ -46,4 +46,43 @@
 .role {
   position: relative;
   right: 10px;
+}
+
+.add-school {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.school {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+
+  & > div {
+    font-size: 1.2rem;
+  }
+}
+
+.school-form {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+  & > mat-form-field {
+    width: 30%;
+  }
+}
+
+.school-data {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }

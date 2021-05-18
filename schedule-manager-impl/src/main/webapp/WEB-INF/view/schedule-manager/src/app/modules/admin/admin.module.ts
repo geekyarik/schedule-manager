@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin.component';
 
 import { MaterialModule } from '../../common';
@@ -13,7 +14,8 @@ import { MaterialModule } from '../../common';
       pathMatch: 'full',
       component: AdminComponent
     }]),
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   declarations: [AdminComponent]
 })
