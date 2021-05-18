@@ -2,6 +2,7 @@ package com.ystan.schedule.repositories;
 
 import com.ystan.schedule.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
@@ -21,11 +22,13 @@ public interface RoleRepository extends JpaRepository<Role, String> {
 
     @Query(
             value = "INSERT INTO SEC_USERS_ROLES (user_id, role_id) " +
-                    "VALUES (?1, ?2)",
+                    "VALUES (?1, ?2) " +
+                    "RETURNING user_id",
             nativeQuery = true
     )
-    void addRoleToUser(String userId, String roleId);
+    String addRoleToUser(String userId, String roleId);
 
+    @Modifying
     @Query(
             value = "DELETE FROM SEC_USERS_ROLES " +
                     "WHERE user_id = ?1 and role_id = ?2",

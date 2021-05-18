@@ -1,5 +1,6 @@
 com\ystan\schedule\models\Role.class
 com\ystan\schedule\security\AuthRequest.class
+com\ystan\schedule\security\EditRoleRequest.class
 com\ystan\schedule\security\RegistrationRequest.class
 com\ystan\schedule\models\User.class
 com\ystan\schedule\services\RoleService.class

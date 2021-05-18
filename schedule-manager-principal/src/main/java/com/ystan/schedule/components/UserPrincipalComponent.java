@@ -2,10 +2,7 @@ package com.ystan.schedule.components;
 
 import com.ystan.schedule.models.Role;
 import com.ystan.schedule.models.User;
-import com.ystan.schedule.security.AuthRequest;
-import com.ystan.schedule.security.AuthResponse;
-import com.ystan.schedule.security.JSONWebTokenUtils;
-import com.ystan.schedule.security.RegistrationRequest;
+import com.ystan.schedule.security.*;
 import com.ystan.schedule.services.RoleService;
 import com.ystan.schedule.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -99,9 +96,9 @@ public class UserPrincipalComponent {
     }
 
     @RequestMapping(value = "/role", method = RequestMethod.POST)
-    public ResponseEntity<?> editRole(String username, String roleId, boolean enable) throws Exception {
-        roleService.editUsersRole(username, roleId, enable);
+    public ResponseEntity<?> editRole(@RequestBody EditRoleRequest request) throws Exception {
+        roleService.editUsersRole(request.getUsername(), request.getRoleId(), request.isEnable());
 
-        return ResponseEntity.ok(username);
+        return ResponseEntity.ok(request.getUsername());
     }
 }
