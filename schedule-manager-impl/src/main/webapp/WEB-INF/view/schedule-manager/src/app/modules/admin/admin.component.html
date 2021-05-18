@@ -1,0 +1,36 @@
+<mat-tab-group>
+  <mat-tab label="Schools"> SCHOOLS </mat-tab>
+  <mat-tab label="Users">
+    <ng-template matTabContent>
+      <mat-list role="list">
+        <mat-list-item
+          *ngFor="let user of users"
+          role="listitem"
+        >
+          <div class="item-wrapper">
+            <div class="title">
+              <div class="name">
+                {{ user.firstName }} {{ user.lastName}}
+              </div>
+              <div *ngIf="!user.isAdmin; else admin" class="role">
+                <button
+                  mat-flat-button
+                  color="primary"
+                  (click)="setAdmin(user)"
+                >
+                  Set as Admin
+                </button>
+              </div>
+            </div>
+
+            <div class="email">{{ user.email }}</div>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template #admin>
+  <div class="admin-label">ADMIN</div>
+</ng-template>

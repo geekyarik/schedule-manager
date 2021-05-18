@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/auth';
+import { AdminGuard } from './modules/admin/admin.guard';
+import { ShellComponent } from './modules/shell/shell.component';
 
 const routes: Routes = [
   {
@@ -13,9 +15,16 @@ const routes: Routes = [
     loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
-    canActivate: [AuthGuard]
+    path: 'shell',
+    component: ShellComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'admin',
+        loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
+        canActivate: [AdminGuard]
+      }
+    ]
   },
   {
     path: '**',

@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
+import { AdminComponent } from './admin.component';
+
+import { MaterialModule } from '../../common';
 
 @NgModule({
   imports: [
@@ -9,9 +11,10 @@ import { DashboardComponent } from './dashboard.component';
     RouterModule.forChild([{
       path: '',
       pathMatch: 'full',
-      component: DashboardComponent
-    }])
+      component: AdminComponent
+    }]),
+    MaterialModule
   ],
-  declarations: [ DashboardComponent ],
+  declarations: [AdminComponent]
 })
-export class DashboardModule { }
+export class AdminModule { }
