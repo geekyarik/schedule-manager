@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class ClassroomDTO extends EntityDTO {
 
+    private String id;
+
     private String name;
 
     private String schoolId;
