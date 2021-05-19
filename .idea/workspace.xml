@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-db/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/target/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/MvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/MvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +162,7 @@
       <workItem from="1618737737229" duration="14843000" />
       <workItem from="1619254010188" duration="5655000" />
       <workItem from="1619262135442" duration="24413000" />
-      <workItem from="1621249752732" duration="29737000" />
+      <workItem from="1621249752732" duration="29881000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -325,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621446599265</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fixed cors fot localhost:4200.">
+      <created>1621446929104</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621446929104</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +373,8 @@
     <MESSAGE value="Edited ClassroomDTO." />
     <MESSAGE value="Edited ClassroomDTO. Fixed /role endpoint." />
     <MESSAGE value="Added endpoints for teacher modifying." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added endpoints for teacher modifying." />
+    <MESSAGE value="Fixed cors fot localhost:4200." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed cors fot localhost:4200." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
