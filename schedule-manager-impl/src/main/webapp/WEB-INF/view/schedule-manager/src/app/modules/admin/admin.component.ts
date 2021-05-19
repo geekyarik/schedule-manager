@@ -1,5 +1,7 @@
+import { takeWhile, filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SchoolService } from '../../common';
 import { AdminService } from './admin.service';
 
 @Component({
@@ -16,15 +18,21 @@ export class AdminComponent implements OnInit {
     address: ['', Validators.required]
   });
 
-  constructor(private adminService: AdminService, private fb: FormBuilder) { }
+  private alive = true;
+
+  constructor(
+    private adminService: AdminService,
+    private fb: FormBuilder,
+    private schoolService: SchoolService
+  ) { }
 
   ngOnInit() {
     this.getUsers();
-    this.getSchools();
+    this.getSchool();
   }
 
-  setAdmin(user: any) {
-    this.adminService.setAdmin(user).subscribe(() => this.getUsers());
+  toggleAdmin(user: any) {
+    this.adminService.toggleAdmin(user).subscribe(() => this.getUsers());
   }
 
   createSchool() {
@@ -49,11 +57,19 @@ export class AdminComponent implements OnInit {
     this.showAddSchoolForm = true;
   }
 
+  private getSchool() {
+    this.schoolService.school$.pipe(
+      filter(Boolean),
+      takeWhile(() => this.alive)
+    )
+    .subscribe(school => this.school = school);
+  }
+
   private getUsers() {
     this.adminService.getUsers().subscribe(users => this.users = users);
   }
 
-  private getSchools() {
-    this.adminService.getSchools().subscribe((schools: any) => this.school = schools[0]);
+  ngOnDestroy() {
+    this.alive = false;
   }
 }

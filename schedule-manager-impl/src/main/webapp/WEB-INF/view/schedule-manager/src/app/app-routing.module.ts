@@ -23,6 +23,22 @@ const routes: Routes = [
         path: 'admin',
         loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
         canActivate: [AdminGuard]
+      },
+      {
+        path: 'classrooms',
+        loadChildren: () => import('./modules/classrooms/classrooms.module').then(m => m.ClassroomsModule),
+      },
+      {
+        path: 'groups',
+        loadChildren: () => import('./modules/groups/groups.module').then(m => m.GroupsModule),
+      },
+      {
+        path: 'subjects',
+        loadChildren: () => import('./modules/subjects/subjects.module').then(m => m.SubjectsModule),
+      },
+      {
+        path: 'teachers',
+        loadChildren: () => import('./modules/teachers/teachers.module').then(m => m.TeachersModule),
       }
     ]
   },

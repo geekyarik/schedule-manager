@@ -1,0 +1,35 @@
+:host {
+  ::ng-deep {
+    .mat-list-item-content {
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form {
+  background-color: #fafafa;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+  form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.list {
+  width: 100%;
+}

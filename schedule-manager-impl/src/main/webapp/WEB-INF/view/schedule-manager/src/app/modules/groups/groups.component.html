@@ -1,0 +1,30 @@
+<section class="container">
+  <div class="list">
+    <mat-list role="list">
+      <mat-list-item *ngFor="let group of groups" role="listitem">
+        <div>{{ group.name }}</div>
+        <button mat-icon-button color="primary" (click)="deleteGroup(group.id)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="form">
+    <h3>Create Group</h3>
+    <form [formGroup]="form">
+      <mat-form-field class="">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+
+      <button
+        mat-flat-button
+        color="primary"
+        [disabled]="form.invalid"
+        (click)="createGroup()"
+      >
+        Save
+      </button>
+    </form>
+  </div>
+</section>

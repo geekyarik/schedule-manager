@@ -9,10 +9,11 @@
       <mat-list-item
         #rla="routerLinkActive"
         *ngFor="let item of navList"
+        class="mat-elevation-z0 nav-item"
         role="listitem"
         routerLinkActive
         [routerLink]="item.link"
-        [class.mat-elevation-z4]="rla.isActive"
+        [ngClass]="{'active mat-elevation-z4': rla.isActive}"
       >
         {{ item.label }}
       </mat-list-item>

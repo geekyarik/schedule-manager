@@ -17,10 +17,10 @@ interface NewUser {
   providedIn: 'root'
 })
 export class AuthService {
-  isAuthenticated$ = new BehaviorSubject(false);
+  isAuthenticated$ = new BehaviorSubject(true);
   roles$ = new BehaviorSubject([]);
   jwt$ = new BehaviorSubject('');
-  isAdmin$ = new BehaviorSubject(false);
+  isAdmin$ = new BehaviorSubject(true);
 
   constructor(private http: HttpClient) { }
 

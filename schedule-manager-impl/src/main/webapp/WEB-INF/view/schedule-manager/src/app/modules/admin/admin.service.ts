@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { map as _map, find } from 'lodash/fp';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -22,17 +22,15 @@ export class AdminService {
     );
   }
 
-  getSchools() {
-    return this.http.get('http://localhost:8080/schedule/schools');
-  }
-
-  setAdmin(user: any) {
+  toggleAdmin(user: any) {
     const body = {
       username: user.email,
       roleId: 2,
-      enable: true
+      enable: !user.isAdmin
     };
-    return this.http.post('http://localhost:8080/role', body);
+    return this.http.post('http://localhost:8080/role', body).pipe(
+      catchError(resp => of(resp))
+    );
   }
 
   createSchool(body: { name: string, address: string, id?: string }) {

@@ -55,13 +55,14 @@
               <div class="name">
                 {{ user.firstName }} {{ user.lastName}}
               </div>
-              <div *ngIf="!user.isAdmin; else admin" class="role">
+              <div class="role">
                 <button
                   mat-flat-button
                   color="primary"
-                  (click)="setAdmin(user)"
+                  [class.admin-label]="user.isAdmin"
+                  (click)="toggleAdmin(user)"
                 >
-                  Set as Admin
+                  {{ user.isAdmin ? 'ADMIN' : 'Set as Admin' }}
                 </button>
               </div>
             </div>
@@ -73,10 +74,6 @@
     </ng-template>
   </mat-tab>
 </mat-tab-group>
-
-<ng-template #admin>
-  <div class="admin-label">ADMIN</div>
-</ng-template>
 
 <ng-template #addSchool>
   <section *ngIf="!showAddSchoolForm" class="add-school">

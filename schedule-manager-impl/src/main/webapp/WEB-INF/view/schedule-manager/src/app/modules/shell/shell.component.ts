@@ -20,8 +20,24 @@ export class ShellComponent implements OnInit {
     label: 'Admin',
     link: 'admin'
   }];
-  defaultNav: NavItem[] = [];
-
+  defaultNav: NavItem[] = [
+    {
+      label: 'Classrooms',
+      link: 'classrooms'
+    },
+    {
+      label: 'Groups',
+      link: 'groups'
+    },
+    {
+      label: 'Subjects',
+      link: 'subjects'
+    },
+    {
+      label: 'Teachers',
+      link: 'teachers'
+    }
+  ];
 
   constructor(
     private authService: AuthService,
