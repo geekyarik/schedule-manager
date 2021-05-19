@@ -42,8 +42,8 @@ public class GroupControllerImpl {
         return new ResponseEntity<>(groupService.saveOrUpdate(group), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(
-            path = "/group/{id}",
+    @PostMapping(
+            path = "/group/{id}/delete",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<ClassroomDTO> deleteById(@PathVariable(name = "id") String id) {
