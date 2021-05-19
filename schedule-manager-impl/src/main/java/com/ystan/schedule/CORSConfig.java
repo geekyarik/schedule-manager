@@ -1,4 +1,4 @@
-package com.ystan.schedule.config;
+package com.ystan.schedule;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
