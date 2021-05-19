@@ -1,6 +1,7 @@
 package com.ystan.schedule.controllers;
 
 
+import com.ystan.schedule.models.ClassroomDTO;
 import com.ystan.schedule.models.GroupDTO;
 import com.ystan.schedule.services.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +40,13 @@ public class GroupControllerImpl {
     )
     public ResponseEntity<GroupDTO> saveOrUpdate(@RequestBody GroupDTO group) {
         return new ResponseEntity<>(groupService.saveOrUpdate(group), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(
+            path = "/group/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<ClassroomDTO> deleteById(@PathVariable(name = "id") String id) {
+        return new ResponseEntity(groupService.delete(id), HttpStatus.OK);
     }
 }

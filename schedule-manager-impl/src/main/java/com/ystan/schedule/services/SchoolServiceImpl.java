@@ -50,4 +50,10 @@ public class SchoolServiceImpl implements SchoolService {
         schoolRepository.findAll().stream().map(schoolMapper::toDto).forEach(resultsSet::add);
         return resultsSet;
     }
+
+    @Override
+    public String delete(String id) {
+        schoolRepository.deleteById(id);
+        return id;
+    }
 }

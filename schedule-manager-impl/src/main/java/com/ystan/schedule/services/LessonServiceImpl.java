@@ -58,4 +58,11 @@ public class LessonServiceImpl implements LessonService {
                 .map(lessonMapper::toDto)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public String delete(String id) {
+        lessonRepository.deleteById(id);
+
+        return id;
+    }
 }

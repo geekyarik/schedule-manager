@@ -43,4 +43,12 @@ public class ClassroomControllerImpl {
     public ResponseEntity<ClassroomDTO> saveOrUpdate(@RequestBody ClassroomDTO classroom) {
         return new ResponseEntity<>(classroomService.saveOrUpdate(classroom), HttpStatus.CREATED);
     }
+
+    @DeleteMapping(
+            path = "/classroom/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<ClassroomDTO> deleteById(@PathVariable(name = "id") String id) {
+        return new ResponseEntity(classroomService.delete(id), HttpStatus.OK);
+    }
 }

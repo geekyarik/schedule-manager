@@ -49,4 +49,12 @@ public class GroupServiceImpl implements GroupService {
     public Group findEntityById(String id) {
         return groupRepository.findById(id).orElse(null);
     }
+
+
+    @Override
+    public String delete(String id) {
+        groupRepository.deleteById(id);
+
+        return id;
+    }
 }

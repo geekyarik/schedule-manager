@@ -39,4 +39,11 @@ public class SubjectServiceImpl implements SubjectService {
     public Subject findEntityById(String id) {
         return subjectRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public String delete(String id) {
+        subjectRepository.deleteById(id);
+
+        return id;
+    }
 }

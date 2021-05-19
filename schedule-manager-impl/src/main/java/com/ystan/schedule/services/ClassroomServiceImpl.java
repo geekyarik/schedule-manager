@@ -49,4 +49,11 @@ public class ClassroomServiceImpl implements ClassroomService {
     public Classroom findEntityById(String id) {
         return classroomRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public String delete(String id) {
+        classroomRepository.deleteById(id);
+
+        return id;
+    }
 }
