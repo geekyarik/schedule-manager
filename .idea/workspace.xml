@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Edited ClassroomDTO.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/SubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/SubjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/java/com/ystan/schedule/repositories/SubjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/src/main/resources/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-db/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-db/target/classes/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/ClassroomControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/ClassroomControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/SubjectControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/SubjectControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/SubjectServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +167,7 @@
       <workItem from="1618737737229" duration="14843000" />
       <workItem from="1619254010188" duration="5655000" />
       <workItem from="1619262135442" duration="24413000" />
-      <workItem from="1621249752732" duration="29881000" />
+      <workItem from="1621249752732" duration="32858000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -332,7 +337,42 @@
       <option name="project" value="LOCAL" />
       <updated>1621446929104</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Edited permissions checks.">
+      <created>1621447286275</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621447286275</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Cors bitch">
+      <created>1621447814451</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1621447814451</updated>
+    </task>
+    <task id="LOCAL-00027" summary="cors bitch 2">
+      <created>1621447889706</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621447889706</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Edited ClassroomDTO.">
+      <created>1621448458120</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1621448458120</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Cors bitch 4">
+      <created>1621448748164</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1621448748164</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +392,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit." />
     <MESSAGE value="Separated app in three modules [api, impl, db]. Configured postgresql." />
     <MESSAGE value="Added School.java and repo.&#10;Projects works, tables create." />
     <MESSAGE value="Added Schedule.java, Lesson.java and repos." />
@@ -370,11 +409,15 @@
     <MESSAGE value="Fixed /role endpoint" />
     <MESSAGE value="Implemented /role endpoint." />
     <MESSAGE value="Fixed /role endpoint." />
-    <MESSAGE value="Edited ClassroomDTO." />
     <MESSAGE value="Edited ClassroomDTO. Fixed /role endpoint." />
     <MESSAGE value="Added endpoints for teacher modifying." />
     <MESSAGE value="Fixed cors fot localhost:4200." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed cors fot localhost:4200." />
+    <MESSAGE value="Edited permissions checks." />
+    <MESSAGE value="Cors bitch" />
+    <MESSAGE value="cors bitch 2" />
+    <MESSAGE value="Edited ClassroomDTO." />
+    <MESSAGE value="Cors bitch 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cors bitch 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

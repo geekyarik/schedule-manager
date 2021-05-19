@@ -8,6 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Slf4j
 @Service
 public class SubjectServiceImpl implements SubjectService {
@@ -45,5 +48,19 @@ public class SubjectServiceImpl implements SubjectService {
         subjectRepository.deleteById(id);
 
         return id;
+    }
+
+    @Override
+    public List<SubjectDTO> findByTeacherId(String teacherId) {
+        return subjectRepository.findByTeacherId(teacherId).stream()
+                .map(subjectMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<SubjectDTO> findAll() {
+        return subjectRepository.findAll().stream()
+                .map(subjectMapper::toDto)
+                .collect(Collectors.toList());
     }
 }

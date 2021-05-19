@@ -9,6 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("schedule")
 public class SubjectControllerImpl {
@@ -22,6 +24,22 @@ public class SubjectControllerImpl {
     )
     public ResponseEntity<SubjectDTO> getById(@PathVariable(name = "id") String id) {
         return new ResponseEntity<>(subjectService.findById(id), HttpStatus.OK);
+    }
+
+    @GetMapping(
+            path = "/subject",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<List<SubjectDTO>> getAll() {
+        return new ResponseEntity<>(subjectService.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(
+            path = "/subject/teacher/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<List<SubjectDTO>> getByTeacherId(@PathVariable(name = "id") String id) {
+        return new ResponseEntity<>(subjectService.findByTeacherId(id), HttpStatus.OK);
     }
 
     @PostMapping(

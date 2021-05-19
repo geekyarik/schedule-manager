@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Transactional
 public interface SubjectRepository extends JpaRepository<Subject, String> {
 
@@ -25,5 +27,11 @@ public interface SubjectRepository extends JpaRepository<Subject, String> {
     )
     void dropSubjectFromTeacher(String teacherId, String subjectId);
 
-    //List<Subject> findByTeacherId(String teacherId);/
+    @Query(
+            value = "SELECT s.* FROM sm_subject s " +
+                    "LEFT JOIN sm_subj_teach st on s.id = st.subject_id " +
+                    "WHERE teacher_id = ?1",
+            nativeQuery = true
+    )
+    List<Subject> findByTeacherId(String teacherId);
 }
