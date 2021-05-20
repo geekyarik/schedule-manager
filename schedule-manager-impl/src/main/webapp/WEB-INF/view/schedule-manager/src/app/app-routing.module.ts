@@ -8,14 +8,14 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'login'
+    redirectTo: 'schedule'
   },
   {
     path: 'login',
     loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'shell',
+    path: 'schedule',
     component: ShellComponent,
     canActivate: [AuthGuard],
     children: [
@@ -38,14 +38,9 @@ const routes: Routes = [
       },
       {
         path: 'teachers',
-        loadChildren: () => import('./modules/teachers/teachers.module').then(m => m.TeachersModule),
+        loadChildren: () => import('./modules/teachers/teachers.module').then(m => m.TeachersModule)
       }
     ]
-  },
-  {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: 'login'
   }
 ];
 

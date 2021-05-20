@@ -1,1 +1,20 @@
-<p>teachers works!</p>
+<section class="teachers-container">
+  <mat-sidenav-container class="teachers">
+    <mat-sidenav mode="side" opened>
+      <mat-list role="list">
+        <mat-list-item
+          *ngFor="let t of teachers$ | async"
+          class="teacher-item"
+          role="listitem"
+          [routerLink]="t.id"
+          routerLinkActive="mat-elevation-z4 active"
+        >
+          {{ t.firstName }} {{ t.lastName }}
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="mat-elevation-z4">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

@@ -1,0 +1,26 @@
+:host {
+  .mat-sidenav {
+    width: 20%;
+    border-right: none;
+  }
+
+  ::ng-deep {
+    .mat-drawer-inner-container {
+      background-color: #fafafa;
+    }
+  }
+}
+
+.teachers-container,
+.teachers {
+  height: 100%;
+}
+
+.teacher-item {
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+.active {
+  background-color: #fff;
+}

@@ -1,8 +1,9 @@
 import { find } from 'lodash/fp';
 import { BehaviorSubject } from 'rxjs';
-import { concatMap, switchMap, tap, map } from 'rxjs/operators';
+import { concatMap, tap, map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { Roles } from './roles';
 
 interface NewUser {
@@ -17,12 +18,12 @@ interface NewUser {
   providedIn: 'root'
 })
 export class AuthService {
-  isAuthenticated$ = new BehaviorSubject(true);
+  isAuthenticated$ = new BehaviorSubject(false);
   roles$ = new BehaviorSubject([]);
   jwt$ = new BehaviorSubject('');
-  isAdmin$ = new BehaviorSubject(true);
+  isAdmin$ = new BehaviorSubject(false);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   login(body: { username: string, password: string }) {
     return this.http.post('http://localhost:8080/auth', body).pipe(
@@ -46,5 +47,13 @@ export class AuthService {
 
   register(body: NewUser) {
     return this.http.post('http://localhost:8080/register', body);
+  }
+
+  logout() {
+    this.router.navigate(['login']);
+    this.isAuthenticated$.next(true);
+    this.roles$.next([]);
+    this.jwt$.next('');
+    this.isAdmin$.next(false);
   }
 }

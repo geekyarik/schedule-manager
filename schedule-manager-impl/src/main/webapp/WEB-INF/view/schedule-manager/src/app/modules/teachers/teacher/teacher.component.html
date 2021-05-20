@@ -1,0 +1,62 @@
+<section class="container">
+  <section class="subjects teachers-subjects">
+    <mat-card class="subj-card">
+      <mat-card-header>
+        <mat-card-title>
+          <h3>{{ 'Teachers Subjects' | uppercase }}</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list role="list">
+          <mat-list-item
+            *ngFor="let ts of subjects"
+            class="subjects"
+            role="listitem"
+          >
+            <div>{{ ts.name }}</div>
+            <button
+              mat-icon-button
+              color="primary"
+              [disabled]="loading[ts.id]"
+              (click)="remove(ts.id)"
+            >
+              <mat-icon>remove</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </section>
+  <section class="arrows">
+    <mat-icon>west</mat-icon>
+    <mat-icon>east</mat-icon>
+  </section>
+  <section class="subjects all-subjects">
+    <mat-card class="subj-card">
+      <mat-card-header>
+        <mat-card-title>
+          <h3>{{ 'Subjects List' | uppercase }}</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list role="list">
+          <mat-list-item
+            *ngFor="let s of allSubjects"
+            class="subjects"
+            role="listitem"
+          >
+            <div>{{ s.name }}</div>
+            <button
+              mat-icon-button
+              color="primary"
+              [disabled]="loading[s.id]"
+              (click)="add(s)"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</section>

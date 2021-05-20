@@ -1,5 +1,4 @@
-import { of } from 'rxjs';
-import { catchError, concatMap } from 'rxjs/operators';
+import { concatMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SchoolService } from '../../common';
@@ -13,7 +12,7 @@ export class SubjectsService {
 
   getSubjects() {
     return this.schoolService.school$.pipe(
-      concatMap((school: any) => this.http.get('http://localhost:8080/schedule/subject'))
+      concatMap(() => this.http.get('http://localhost:8080/schedule/subject'))
     );
   }
 

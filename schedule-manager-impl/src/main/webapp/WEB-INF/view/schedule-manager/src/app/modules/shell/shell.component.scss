@@ -5,15 +5,16 @@
     }
 
     .mat-drawer-content {
-      background-color: #fff;
+      background-color: #fafafa;
     }
 
     .nav-item{
       background-color: #e8e8e8;
       border-bottom: 1px solid #ccc;
+      cursor: pointer;
 
       &.active {
-        background-color: #fff;
+        background-color: #fafafa;
         border-bottom: none;
       }
     }

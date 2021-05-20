@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         tap(response => this.loginFail = response === this.loginError),
         filter(response => response !== this.loginError)
       )
-      .subscribe(() => this.router.navigate(['shell']));
+      .subscribe(() => this.router.navigate(['schedule']));
   }
 
   private initForm() {

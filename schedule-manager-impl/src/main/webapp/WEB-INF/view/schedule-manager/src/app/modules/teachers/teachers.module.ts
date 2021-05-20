@@ -4,18 +4,23 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../common';
 import { TeachersComponent } from './teachers.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 @NgModule({
   declarations: [
-    TeachersComponent
+    TeachersComponent,
+    TeacherComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     RouterModule.forChild([{
       path: '',
-      pathMatch: 'full',
-      component: TeachersComponent
+      component: TeachersComponent,
+      children: [{
+        path: ':id',
+        component: TeacherComponent
+      }]
     }]),
     MaterialModule
   ]
