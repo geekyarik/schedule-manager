@@ -50,6 +50,14 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    public List<TeacherDTO> findBySubjectId(String schoolId) {
+        mapRegisteredUsers();
+        return teacherRepository.findBySubjectId(schoolId).stream()
+                .map(teacherMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<TeacherDTO> findBySchoolId(String schoolId) {
         mapRegisteredUsers();
         return teacherRepository.findBySchoolId(schoolId).stream()

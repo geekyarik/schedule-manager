@@ -12,7 +12,7 @@ public class TeacherMapper implements EntityMapper<Teacher, TeacherDTO> {
     @Override
     public TeacherDTO toDto(Teacher source) {
         TeacherDTO target = new TeacherDTO();
-        BeanUtils.copyProperties(source, target, "school", "subjects", "lessons");
+        BeanUtils.copyProperties(source, target, "school", "subjects", "lessons", "rules");
 
         return target;
     }

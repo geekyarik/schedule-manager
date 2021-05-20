@@ -60,4 +60,12 @@ public class Lesson {
             foreignKey = @ForeignKey(name = "FK_LESSON_TO_SUBJECT")
     )
     private Subject subject;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = "schoolId",
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "FK_LESSON_TO_SCHOOL")
+    )
+    private School school;
 }

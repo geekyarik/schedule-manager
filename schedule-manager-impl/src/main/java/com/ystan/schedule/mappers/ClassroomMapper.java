@@ -17,7 +17,7 @@ public class ClassroomMapper implements EntityMapper<Classroom, ClassroomDTO> {
     @Override
     public ClassroomDTO toDto(Classroom source) {
         ClassroomDTO target = new ClassroomDTO();
-        BeanUtils.copyProperties(source, target, "school", "lessons");
+        BeanUtils.copyProperties(source, target, "school", "lessons", "rules");
 
         return target;
     }

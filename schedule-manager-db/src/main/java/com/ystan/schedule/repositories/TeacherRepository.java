@@ -20,4 +20,13 @@ public interface TeacherRepository extends JpaRepository<Teacher, String> {
             nativeQuery = true
     )
     List<Teacher> findBySchoolId(String schoolId);
+
+    @Query(
+            value = "SELECT * " +
+                    "FROM sm_teacher t " +
+                    "LEFT JOIN sm_subj_teach sst on t.id = sst.teacher_id " +
+                    "WHERE sst.subject_id = ?1",
+            nativeQuery = true
+    )
+    List<Teacher> findBySubjectId(String schoolId);
 }

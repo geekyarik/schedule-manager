@@ -12,7 +12,7 @@ public class SubjectMapper implements EntityMapper<Subject, SubjectDTO> {
     @Override
     public SubjectDTO toDto(Subject source) {
         SubjectDTO target = new SubjectDTO();
-        BeanUtils.copyProperties(source, target, "teachers", "lessons");
+        BeanUtils.copyProperties(source, target, "teachers", "lessons", "rules");
 
         return target;
     }

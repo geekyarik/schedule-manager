@@ -11,6 +11,8 @@ public interface TeacherService extends CRUDService<String, TeacherDTO>, FindEnt
 
     List<TeacherDTO> findBySchoolId(String schoolId);
 
+    List<TeacherDTO> findBySubjectId(String schoolId);
+
     String addSubjectToTeacher(String teacherId, String subjectId);
 
     String dropSubjectFromTeacher(String teacherId, String subjectId);

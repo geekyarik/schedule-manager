@@ -28,6 +28,14 @@ public class TeacherControllerImpl {
     }
 
     @GetMapping(
+            path = "/teacher/subject/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<List<TeacherDTO>> getTeachersBySubjectId(@PathVariable(name = "id") String id) {
+        return new ResponseEntity<>(teacherService.findBySubjectId(id), HttpStatus.OK);
+    }
+
+    @GetMapping(
             path = "/teacher",
             produces = MediaType.APPLICATION_JSON_VALUE
     )

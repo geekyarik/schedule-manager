@@ -40,4 +40,12 @@ public class Classroom {
             cascade = CascadeType.PERSIST
     )
     private List<Lesson> lessons;
+
+    @JsonIgnore
+    @OneToMany(
+            mappedBy = "preferredRoom",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST
+    )
+    private List<Rule> rules;
 }

@@ -50,4 +50,12 @@ public class Group {
     )
     @JsonIgnore
     private List<Lesson> lessons;
+
+    @OneToMany(
+            cascade = CascadeType.PERSIST,
+            fetch = FetchType.LAZY,
+            mappedBy = "group"
+    )
+    @JsonIgnore
+    private List<Rule> rules;
 }

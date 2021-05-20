@@ -17,7 +17,7 @@ public class GroupMapper implements EntityMapper<Group, GroupDTO> {
     @Override
     public GroupDTO toDto(Group source) {
         GroupDTO target = new GroupDTO();
-        BeanUtils.copyProperties(source, target, "school", "lessons", "schedule");
+        BeanUtils.copyProperties(source, target, "school", "lessons", "schedule", "rules");
 
         return target;
     }

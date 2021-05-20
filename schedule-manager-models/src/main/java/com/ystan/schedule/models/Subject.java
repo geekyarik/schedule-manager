@@ -28,7 +28,8 @@ public class Subject {
     @JoinTable(
             name = "SM_SUBJ_TEACH",
             joinColumns = @JoinColumn(name = "subjectId"),
-            inverseJoinColumns = @JoinColumn(name = "teacherId")
+            inverseJoinColumns = @JoinColumn(name = "teacherId"),
+            uniqueConstraints = @UniqueConstraint(name = "UNIQUE_SUBJECTS_FOR_TEACHER", columnNames = {"subjectId","teacherId"})
     )
     @JsonIgnore
     private List<Teacher> teachers;
@@ -40,4 +41,12 @@ public class Subject {
     )
     @JsonIgnore
     private List<Lesson> lessons;
+
+    @OneToMany(
+            mappedBy = "subject",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST
+    )
+    @JsonIgnore
+    private List<Rule> rules;
 }

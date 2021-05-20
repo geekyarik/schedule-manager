@@ -52,4 +52,12 @@ public class Teacher {
     )
     @JsonIgnore
     private List<Lesson> lessons;
+
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            mappedBy = "preferredTeacher",
+            cascade = CascadeType.PERSIST
+    )
+    @JsonIgnore
+    private List<Rule> rules;
 }
