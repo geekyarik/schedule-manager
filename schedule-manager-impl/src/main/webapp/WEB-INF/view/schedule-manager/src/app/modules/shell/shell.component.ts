@@ -36,6 +36,10 @@ export class ShellComponent implements OnInit {
     {
       label: 'Teachers',
       link: 'teachers'
+    },
+    {
+      label: 'Schedule Generation',
+      link: 'schedule-generation'
     }
   ];
 

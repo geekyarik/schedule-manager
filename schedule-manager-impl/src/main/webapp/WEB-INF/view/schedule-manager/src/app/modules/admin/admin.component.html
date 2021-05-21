@@ -14,7 +14,7 @@
             [disabled]="showAddSchoolForm"
             (click)="openSchoolForm()"
           >
-            Edit School
+            EDIT SCHOOL
           </button>
         </div>
       </section>
@@ -36,7 +36,7 @@
             [disabled]="schoolForm.invalid"
             (click)="createSchool()"
           >
-            Save
+            SAVE
           </button>
         </form>
       </section>
@@ -62,7 +62,7 @@
                   [class.admin-label]="user.isAdmin"
                   (click)="toggleAdmin(user)"
                 >
-                  {{ user.isAdmin ? 'ADMIN' : 'Set as Admin' }}
+                  {{ user.isAdmin ? 'ADMIN' : 'SET AS ADMIN' }}
                 </button>
               </div>
             </div>
@@ -82,7 +82,7 @@
       color="primary"
       (click)="openSchoolForm()"
     >
-      Add School
+      ADD SCHOOL
     </button>
   </section>
 </ng-template>

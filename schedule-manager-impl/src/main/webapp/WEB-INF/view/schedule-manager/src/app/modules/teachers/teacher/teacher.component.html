@@ -1,6 +1,6 @@
 <section class="container">
   <section class="subjects teachers-subjects">
-    <mat-card class="subj-card">
+    <mat-card class="subj-card mat-elevation-z8">
       <mat-card-header>
         <mat-card-title>
           <h3>{{ 'Teachers Subjects' | uppercase }}</h3>
@@ -10,7 +10,7 @@
         <mat-list role="list">
           <mat-list-item
             *ngFor="let ts of subjects"
-            class="subjects"
+            class="subjects-items"
             role="listitem"
           >
             <div>{{ ts.name }}</div>
@@ -32,7 +32,7 @@
     <mat-icon>east</mat-icon>
   </section>
   <section class="subjects all-subjects">
-    <mat-card class="subj-card">
+    <mat-card class="subj-card mat-elevation-z8">
       <mat-card-header>
         <mat-card-title>
           <h3>{{ 'Subjects List' | uppercase }}</h3>
@@ -42,7 +42,7 @@
         <mat-list role="list">
           <mat-list-item
             *ngFor="let s of allSubjects"
-            class="subjects"
+            class="subjects-items"
             role="listitem"
           >
             <div>{{ s.name }}</div>

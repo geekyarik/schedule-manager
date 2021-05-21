@@ -6,12 +6,15 @@
 
   ::ng-deep {
     .mat-drawer-inner-container {
-      background-color: #fafafa;
+      background-color: #f4f4f4;
     }
   }
 }
 
-.teachers-container,
+.teachers-container {
+  height: 100%;
+}
+
 .teachers {
   height: 100%;
 }

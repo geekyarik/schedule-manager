@@ -6,6 +6,14 @@
       padding: 10px;
       margin: 10px;
     }
+
+    .mat-card-content {
+      width: 300px;
+
+      .mat-form-field {
+        width: 300px;
+      }
+    }
   }
 }
 
@@ -17,10 +25,6 @@
 }
 
 .form {
-  background-color: #fafafa;
-  padding: 20px;
-  border: 1px solid #ccc;
-
   form {
     display: flex;
     align-content: center;

@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 const modules: any = [
   MatFormFieldModule,
@@ -20,7 +21,8 @@ const modules: any = [
   MatSidenavModule,
   MatListModule,
   MatTabsModule,
-  MatCardModule
+  MatCardModule,
+  MatAutocompleteModule
 ];
 
 @NgModule({

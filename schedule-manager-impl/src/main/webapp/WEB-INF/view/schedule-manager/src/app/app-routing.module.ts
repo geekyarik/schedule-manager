@@ -39,9 +39,17 @@ const routes: Routes = [
       {
         path: 'teachers',
         loadChildren: () => import('./modules/teachers/teachers.module').then(m => m.TeachersModule)
+      },
+      {
+        path: 'schedule-generation',
+        loadChildren: () => import('./modules/schedule-generation/schedule-generation.module').then(m => m.ScheduleGenerationModule)
       }
     ]
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'schedule'
+  },
 ];
 
 @NgModule({

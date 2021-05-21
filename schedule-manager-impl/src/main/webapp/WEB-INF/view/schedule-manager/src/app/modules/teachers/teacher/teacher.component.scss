@@ -1,4 +1,23 @@
+:host {
+  ::ng-deep {
+    .subjects-items {
+      .mat-list-item-content {
+        justify-content: space-between;
+      }
+    }
+
+    .subj-card {
+      height: calc(100% - 32px);
+
+      .mat-card-header {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}
+
 .container {
+  height: calc(100% - 74px);
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -9,7 +28,8 @@
 }
 
 .subjects {
-  min-width: 30%;
+  min-width: 45%;
+  height: 100%;
 }
 
 .arrows {

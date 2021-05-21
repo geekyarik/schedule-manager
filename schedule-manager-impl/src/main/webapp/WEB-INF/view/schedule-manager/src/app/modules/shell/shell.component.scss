@@ -5,7 +5,7 @@
     }
 
     .mat-drawer-content {
-      background-color: #fafafa;
+      background-color: #f4f4f4;
     }
 
     .nav-item{
@@ -14,7 +14,7 @@
       cursor: pointer;
 
       &.active {
-        background-color: #fafafa;
+        background-color: #f4f4f4;
         border-bottom: none;
       }
     }
@@ -22,7 +22,7 @@
 }
 
 .container {
-  height: 100%;
+  height: calc(100% - 64px);
 }
 
 .sidenav {

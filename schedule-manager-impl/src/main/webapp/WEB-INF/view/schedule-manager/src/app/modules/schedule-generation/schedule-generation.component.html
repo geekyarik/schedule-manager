@@ -1,0 +1,136 @@
+<section class="container">
+  <section class="rules">
+    <mat-card *ngFor="let r of rules" class="rule-card mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>{{ r.name }}</mat-card-title>
+        <mat-card-subtitle>Times per week: {{ r.timesPerWeek }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="rule-value" class="rule-label">
+          <span class="rule-label-name">Group: </span>
+          <span>{{ r.group?.name }}</span>
+        </div>
+        <div class="rule-value" class="rule-label">
+          <span class="rule-label-name">Subject: </span>
+          <span>{{ r.subject?.name }}</span>
+        </div>
+        <div class="rule-value" class="rule-label">
+          <span class="rule-label-name">Room: </span>
+          <span>{{ r.preferredRoom?.name }}</span>
+        </div>
+        <div class="rule-value" class="rule-label">
+          <span class="rule-label-name">Teacher: </span>
+          <span>{{ r.preferredTeacher?.firstName }} {{ r.preferredTeacher?.lastName }}</span>
+        </div>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button color="warn" (click)="remove(r)">REMOVE</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+
+  <section class="add-rule">
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="generate()"
+    >
+      GENERATE SCHEDULE
+    </button>
+
+    <mat-card class="add-rule-card">
+      <mat-card-header>
+        <mat-card-title>Create Rule</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="form" class="add-rule-form">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Times Per Week</mat-label>
+            <input type="number" min="1" matInput formControlName="timesPerWeek" value="1" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Group</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Group"
+              matInput
+              formControlName="group"
+              [matAutocomplete]="group"
+              required
+            >
+            <mat-autocomplete autoActiveFirstOption #group="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of groups$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Subject</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Subject"
+              matInput
+              formControlName="subject"
+              [matAutocomplete]="subject"
+              required
+            >
+            <mat-autocomplete autoActiveFirstOption #subject="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of subject$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Preferred Room</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Room"
+              matInput
+              formControlName="preferredRoom"
+              [matAutocomplete]="preferredRoom"
+            >
+            <mat-autocomplete autoActiveFirstOption #preferredRoom="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of rooms$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Preferred Teacher</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Teacher"
+              matInput
+              formControlName="preferredTeacher"
+              [matAutocomplete]="preferredTeacher"
+            >
+            <mat-autocomplete autoActiveFirstOption #preferredTeacher="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of teachers$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button
+          mat-button
+          color="primary"
+          [disabled]="form.invalid"
+          (click)="saveRule()"
+        >
+          SAVE
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+</section>
