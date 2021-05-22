@@ -10,11 +10,13 @@ public class LessonDTO extends EntityDTO {
 
     private String startTime;
 
-    private SubjectDTO subjectDTO;
+    private SubjectDTO subject;
 
-    private String groupId;
+    private GroupDTO group;
 
-    private String classroomId;
+    private ClassroomDTO classroom;
 
-    private String teacherId;
+    private TeacherDTO teacher;
+
+    private SchoolDTO school;
 }
