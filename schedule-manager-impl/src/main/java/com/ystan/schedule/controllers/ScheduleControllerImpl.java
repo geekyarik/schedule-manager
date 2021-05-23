@@ -1,6 +1,5 @@
 package com.ystan.schedule.controllers;
 
-import com.ystan.schedule.models.RuleDTO;
 import com.ystan.schedule.services.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

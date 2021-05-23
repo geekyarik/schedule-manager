@@ -15,4 +15,13 @@ public interface LessonRepository extends JpaRepository<Lesson, String> {
 
     List<Lesson> findByClassroomId(String schoolId);
 
+    List<Lesson> findByGroupAndDayOfWeek(String groupId, String dayOfWeek);
+
+    List<Lesson> findByTeacherAndDayOfWeek(String teacherId, String dayOfWeek);
+
+    List<Lesson> findByClassroomAndDayOfWeek(String classroomId, String dayOfWeek);
+
+    Integer countByTeacher(String teacherId);
+
+    Integer countByClassroom(String classroomId);
 }

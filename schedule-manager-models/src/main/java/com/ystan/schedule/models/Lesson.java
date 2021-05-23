@@ -1,5 +1,6 @@
 package com.ystan.schedule.models;
 
+import com.ystan.schedule.enums.Day;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,6 +26,13 @@ public class Lesson {
 
     @Column
     private LocalDateTime startTime;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private Day dayOfWeek;
+
+    @Column
+    private Integer ordinalNumber;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(
