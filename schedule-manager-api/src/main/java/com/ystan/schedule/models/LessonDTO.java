@@ -13,7 +13,7 @@ public class LessonDTO extends EntityDTO {
 
     private Integer ordinalNumber;
 
-    private Day day;
+    private Day dayOfWeek;
 
     private SubjectDTO subject;
 
