@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="">
+    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Added lesson delete endpoint.">
+      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/AvailableControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/requests/GetBySchoolIdRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/LessonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-api/src/main/java/com/ystan/schedule/services/LessonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/LessonControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/LessonControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/services/LessonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/filters/JSONWebTokenRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/filters/JSONWebTokenRequestFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +167,7 @@
       <workItem from="1621523591021" duration="390000" />
       <workItem from="1621524024387" duration="8187000" />
       <workItem from="1621670777664" duration="217000" />
-      <workItem from="1621671902961" duration="32170000" />
+      <workItem from="1621671902961" duration="34738000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -413,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621883864667</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added lesson delete endpoint.">
+      <created>1621884023835</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1621884023835</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +441,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added DTOs, Mappers, Service Impls, Controllers." />
     <MESSAGE value="Added SLF4J logging in services." />
     <MESSAGE value="Optimized code and imports." />
     <MESSAGE value="Added spring security. Separated database module configuration in properties file." />
@@ -458,7 +465,8 @@
     <MESSAGE value="Added chain of responsibility for schedule generation." />
     <MESSAGE value="Edited chain of responsibility for schedule generation. added new handlers." />
     <MESSAGE value="Fixed schesule generation process. Added new endpoints." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed schesule generation process. Added new endpoints." />
+    <MESSAGE value="Added lesson delete endpoint." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added lesson delete endpoint." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -540,6 +548,11 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/filters/JSONWebTokenRequestFilter.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/schedule-manager-models/src/main/java/com/ystan/schedule/ModelsModuleConfig.java</url>

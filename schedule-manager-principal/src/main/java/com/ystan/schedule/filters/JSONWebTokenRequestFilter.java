@@ -32,21 +32,23 @@ public class JSONWebTokenRequestFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain)
             throws ServletException, IOException {
 
-        final String header = httpServletRequest.getHeader(AUTH_HEADER);
-        String username = null;
-        String jwt = null;
+        if(!httpServletRequest.getServletPath().startsWith("/available")) {
+            final String header = httpServletRequest.getHeader(AUTH_HEADER);
+            String username = null;
+            String jwt = null;
 
-        if (Strings.isNotEmpty(header) && header.startsWith(JWT_TOKEN_START)) {
-            jwt = header.replace(JWT_TOKEN_START, Strings.EMPTY);
-            username = jsonWebTokenUtils.extractUsername(jwt);
-        }
+            if (Strings.isNotEmpty(header) && header.startsWith(JWT_TOKEN_START)) {
+                jwt = header.replace(JWT_TOKEN_START, Strings.EMPTY);
+                username = jsonWebTokenUtils.extractUsername(jwt);
+            }
 
-        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-            if (jsonWebTokenUtils.validateToken(jwt, userDetails)) {
-                UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-                authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
-                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                if (jsonWebTokenUtils.validateToken(jwt, userDetails)) {
+                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
+                    SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                }
             }
         }
 
