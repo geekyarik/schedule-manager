@@ -33,8 +33,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/schedule/classroom/**", "/schedule/group/**", "/schedule/teacher/**", "/schedule/subject/**", "/schedule/rule/**").hasRole("TEACHER")
                 .antMatchers("/auth", "/register", "/users", "/principal", "/role", "/schedule/lesson/**", "/schedule/lesson/classroom/**", "/schedule/lesson/group/**", " /schedule/lesson/teacher/**", "/available/classroom").permitAll()
-                //.anyRequest()
-                //.authenticated()
+                .anyRequest()
+                .authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 

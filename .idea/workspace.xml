@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Added lesson delete endpoint.">
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/controllers/AvailableControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/requests/GetBySchoolIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="054fd3c2-40a9-48ec-a904-d58685931772" name="Default Changelist" comment="Fixed /available endpoints.">
       <change beforePath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-impl/src/main/java/com/ystan/schedule/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/filters/JSONWebTokenRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-manager-principal/src/main/java/com/ystan/schedule/filters/JSONWebTokenRequestFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +73,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="FeaturesTrainerSettingsPanel" />
     <property name="ts.external.directory.path" value="F:\Spring Studying\projects\schedule-manager\schedule-manager-impl\src\main\webapp\WEB-INF\view\schedule-manager\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -167,7 +163,7 @@
       <workItem from="1621523591021" duration="390000" />
       <workItem from="1621524024387" duration="8187000" />
       <workItem from="1621670777664" duration="217000" />
-      <workItem from="1621671902961" duration="34738000" />
+      <workItem from="1621671902961" duration="35037000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -421,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621884023835</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Fixed /available endpoints.">
+      <created>1621886636198</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1621886636198</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +444,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added SLF4J logging in services." />
     <MESSAGE value="Optimized code and imports." />
     <MESSAGE value="Added spring security. Separated database module configuration in properties file." />
     <MESSAGE value="Updated gitignore." />
@@ -466,7 +468,8 @@
     <MESSAGE value="Edited chain of responsibility for schedule generation. added new handlers." />
     <MESSAGE value="Fixed schesule generation process. Added new endpoints." />
     <MESSAGE value="Added lesson delete endpoint." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lesson delete endpoint." />
+    <MESSAGE value="Fixed /available endpoints." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed /available endpoints." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
