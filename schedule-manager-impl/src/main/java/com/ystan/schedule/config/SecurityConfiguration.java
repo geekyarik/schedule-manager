@@ -32,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .cors().and().csrf().disable()// _csrf parameter in the requests
                 .authorizeRequests()
                 .antMatchers("/schedule/classroom/**", "/schedule/group/**", "/schedule/teacher/**", "/schedule/subject/**", "/schedule/rule/**").hasRole("TEACHER")
-                .antMatchers("/auth", "/register", "/users", "/principal", "/role", "/schedule/lesson/**", "/schedule/**", "/schedule/lesson/classroom/**", "/schedule/lesson/group/**", " /schedule/lesson/teacher/**", "/available/classroom").permitAll()
+                .antMatchers("/auth", "/register", "/users", "/principal", "/role", "/schedule/lesson/**", "/schedule/**", "/schedule/lesson/classroom/**", "/schedule/lesson/group/**", " /schedule/lesson/teacher/**", "/available/classroom", "/available/teacher", "/available/group").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
