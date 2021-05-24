@@ -12,4 +12,6 @@ public interface LessonService extends CRUDService<String, LessonDTO> {
     List<LessonDTO> findByTeacherId(String schoolId);
 
     List<LessonDTO> findByClassroomId(String schoolId);
+
+    void deleteById(String id);
 }

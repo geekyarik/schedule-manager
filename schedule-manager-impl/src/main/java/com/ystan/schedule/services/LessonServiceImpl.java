@@ -60,6 +60,11 @@ public class LessonServiceImpl implements LessonService {
     }
 
     @Override
+    public void deleteById(String id) {
+        lessonRepository.deleteById(id);
+    }
+
+    @Override
     public String delete(String id) {
         lessonRepository.deleteById(id);
 

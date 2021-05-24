@@ -26,6 +26,15 @@ public class LessonControllerImpl {
         return new ResponseEntity<>(lessonService.findById(id), HttpStatus.OK);
     }
 
+    @PostMapping(
+            path = "/lesson/{id}/delete",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<LessonDTO> deleteById(@PathVariable(name = "id") String id) {
+        lessonService.deleteById(id);
+        return new ResponseEntity(id, HttpStatus.OK);
+    }
+
     @GetMapping(
             path = "/lesson/classroom/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE
