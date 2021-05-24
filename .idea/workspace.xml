@@ -161,7 +161,7 @@
       <workItem from="1621523591021" duration="390000" />
       <workItem from="1621524024387" duration="8187000" />
       <workItem from="1621670777664" duration="217000" />
-      <workItem from="1621671902961" duration="35313000" />
+      <workItem from="1621671902961" duration="36079000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1609182509412</created>
@@ -429,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621887036066</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Fixed day of lesson">
+      <created>1621887340818</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1621887340818</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +456,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added spring security. Separated database module configuration in properties file." />
     <MESSAGE value="Updated gitignore." />
     <MESSAGE value="Added /schools and /principal endpoints." />
     <MESSAGE value="Added /users endpoint" />
@@ -474,7 +480,8 @@
     <MESSAGE value="Added lesson delete endpoint." />
     <MESSAGE value="Fixed /available endpoints." />
     <MESSAGE value="Fixed security configuration." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed security configuration." />
+    <MESSAGE value="Fixed day of lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed day of lesson" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
