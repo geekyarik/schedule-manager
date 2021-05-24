@@ -1,5 +1,6 @@
 package com.ystan.schedule.services;
 
+import com.ystan.schedule.enums.Day;
 import com.ystan.schedule.mappers.ClassroomMapper;
 import com.ystan.schedule.models.Classroom;
 import com.ystan.schedule.models.ClassroomDTO;
@@ -41,6 +42,13 @@ public class ClassroomServiceImpl implements ClassroomService {
     @Override
     public List<ClassroomDTO> findBySchoolId(String schoolId) {
         return classroomRepository.findBySchoolId(schoolId).stream()
+                .map(classroomMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ClassroomDTO> findAvailable(Day day, Integer ordinalNumber, String schoolId) {
+        return classroomRepository.findAvailable(day.name(), ordinalNumber, schoolId).stream()
                 .map(classroomMapper::toDto)
                 .collect(Collectors.toList());
     }

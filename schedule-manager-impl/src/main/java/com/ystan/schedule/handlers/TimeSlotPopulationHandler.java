@@ -27,24 +27,26 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
     public void handle(ScheduleGenerationRequest request) {
         final Rule rule = request.getRule();
         final Group group = rule.getGroup();
+        final Subject subject = rule.getSubject();
         final Teacher teacher = request.getSelectedTeacher();
         final Classroom classroom = request.getSelectedClassroom();
 
         populateList(request, rule.getTimesPerWeek());
 
         for (Lesson lesson : request.getLessons()) {
-            boolean setDay = setDayOfWeek(lesson, group, teacher, classroom, COMMON_DAY_CAPACITY);
+            boolean setDay = setDayOfWeek(lesson, subject, group, teacher, classroom, COMMON_DAY_CAPACITY);
             if (!setDay) {
-                setDayOfWeek(lesson, group, teacher, classroom, MAX_DAY_CAPACITY);
+                setDayOfWeek(lesson, subject, group, teacher, classroom, MAX_DAY_CAPACITY);
             }
+            lesson = lessonRepository.save(lesson);
         }
 
         next(request);
     }
 
-    private boolean setDayOfWeek(Lesson lesson, Group group, Teacher teacher, Classroom classroom, Integer dayCapacity) {
+    private boolean setDayOfWeek(Lesson lesson, Subject subject, Group group, Teacher teacher, Classroom classroom, Integer dayCapacity) {
         for (Day day : Day.values()) {
-            if (worksForGroup(group, day, dayCapacity)
+            if (worksForGroup(group, subject, day, dayCapacity)
                     && worksForTeacher(teacher, day, dayCapacity)
                     && worksForClassroom(classroom, day, dayCapacity)
             ) {
@@ -85,7 +87,7 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
     }
 
     private Set<Integer> getFreeOrdinalsForGroup(Group group, Day day, Integer dayCapacity) {
-        Set<Integer> takenRange = lessonRepository.findByGroupAndDayOfWeek(group.getId(), day.toString()).stream()
+        Set<Integer> takenRange = lessonRepository.findByGroupIdAndDayOfWeek(group.getId(), day).stream()
                 .map(Lesson::getOrdinalNumber)
                 .collect(Collectors.toSet());
 
@@ -93,7 +95,7 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
     }
 
     private Set<Integer> getFreeOrdinalsForTeacher(Teacher teacher, Day day, Integer dayCapacity) {
-        Set<Integer> takenRange = lessonRepository.findByTeacherAndDayOfWeek(teacher.getId(), day.toString()).stream()
+        Set<Integer> takenRange = lessonRepository.findByTeacherIdAndDayOfWeek(teacher.getId(), day).stream()
                 .map(Lesson::getOrdinalNumber)
                 .collect(Collectors.toSet());
 
@@ -101,7 +103,7 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
     }
 
     private Set<Integer> getFreeOrdinalsForClassroom(Classroom classroom, Day day, Integer dayCapacity) {
-        Set<Integer> takenRange = lessonRepository.findByClassroomAndDayOfWeek(classroom.getId(), day.toString()).stream()
+        Set<Integer> takenRange = lessonRepository.findByClassroomIdAndDayOfWeek(classroom.getId(), day).stream()
                 .map(Lesson::getOrdinalNumber)
                 .collect(Collectors.toSet());
 
@@ -110,17 +112,21 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
 
     private Set<Integer> getFreeRange(Set<Integer> takenRange, Integer capacity) {
         Set<Integer> wholeRange = getRange(capacity);
+        wholeRange.remove(0);
         Set<Integer> freeRange = wholeRange.stream()
-                .filter(el -> takenRange.contains(el))
+                .filter(el -> !takenRange.contains(el))
                 .collect(Collectors.toSet());
 
         return freeRange;
     }
 
-    private boolean worksForGroup(Group group, Day day, Integer dayCapacity) {
+    private boolean worksForGroup(Group group, Subject subject, Day day, Integer dayCapacity) {
         boolean works = false;
 
-        List<Lesson> lessons = lessonRepository.findByGroupAndDayOfWeek(group.getId(), day.toString());
+        List<Lesson> lessons = lessonRepository.findByGroupIdAndDayOfWeek(group.getId(), day);
+        if(lessons.stream().anyMatch(lesson -> lesson.getSubject().getId() == subject.getId())) {
+            return false;
+        }
         if (lessons.size() < dayCapacity) {
             works = true;
         }
@@ -131,7 +137,7 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
     private boolean worksForTeacher(Teacher teacher, Day day, Integer dayCapacity) {
         boolean works = false;
 
-        List<Lesson> lessons = lessonRepository.findByTeacherAndDayOfWeek(teacher.getId(), day.toString());
+        List<Lesson> lessons = lessonRepository.findByTeacherIdAndDayOfWeek(teacher.getId(), day);
         if (lessons.size() < dayCapacity) {
             works = true;
         }
@@ -142,7 +148,7 @@ public class TimeSlotPopulationHandler extends BaseScheduleGenerationHandler {
     private boolean worksForClassroom(Classroom classroom, Day day, Integer dayCapacity) {
         boolean works = false;
 
-        List<Lesson> lessons = lessonRepository.findByClassroomAndDayOfWeek(classroom.getId(), day.toString());
+        List<Lesson> lessons = lessonRepository.findByClassroomIdAndDayOfWeek(classroom.getId(), day);
         if (lessons.size() < dayCapacity) {
             works = true;
         }

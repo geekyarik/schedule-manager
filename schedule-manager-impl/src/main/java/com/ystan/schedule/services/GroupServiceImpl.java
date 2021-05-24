@@ -1,5 +1,6 @@
 package com.ystan.schedule.services;
 
+import com.ystan.schedule.enums.Day;
 import com.ystan.schedule.mappers.GroupMapper;
 import com.ystan.schedule.models.Group;
 import com.ystan.schedule.models.GroupDTO;
@@ -41,6 +42,13 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public List<GroupDTO> findBySchoolId(String schoolId) {
         return groupRepository.findBySchoolId(schoolId).stream()
+                .map(groupMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<GroupDTO> findAvailable(Day day, Integer ordinalNumber, String schoolId) {
+        return groupRepository.findAvailable(day.name(), ordinalNumber, schoolId).stream()
                 .map(groupMapper::toDto)
                 .collect(Collectors.toList());
     }

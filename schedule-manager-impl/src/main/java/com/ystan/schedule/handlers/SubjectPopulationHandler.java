@@ -5,7 +5,9 @@ import com.ystan.schedule.handlers.common.ScheduleGenerationRequest;
 import com.ystan.schedule.models.Group;
 import com.ystan.schedule.models.Rule;
 import com.ystan.schedule.models.Subject;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SubjectPopulationHandler extends BaseScheduleGenerationHandler {
     
     @Override

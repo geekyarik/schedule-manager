@@ -6,10 +6,12 @@ import com.ystan.schedule.handlers.common.ScheduleGenerationRequest;
 import com.ystan.schedule.models.Classroom;
 import com.ystan.schedule.repositories.ClassroomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
 import java.util.List;
 
+@Component
 public class ClassroomPopulationHandler extends BaseScheduleGenerationHandler {
 
     @Autowired
@@ -20,7 +22,7 @@ public class ClassroomPopulationHandler extends BaseScheduleGenerationHandler {
         Classroom selectedClassroom = selectClassroom(request);
         request.setSelectedClassroom(selectedClassroom);
 
-        selectedClassroom.getLessons().forEach(lesson -> lesson.setClassroom(selectedClassroom));
+        request.getLessons().forEach(lesson -> lesson.setClassroom(selectedClassroom));
 
         next(request);
     }

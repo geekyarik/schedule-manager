@@ -7,7 +7,9 @@ import com.ystan.schedule.models.School;
 import com.ystan.schedule.models.Subject;
 import com.ystan.schedule.repositories.SchoolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SchoolPopulationHandler extends BaseScheduleGenerationHandler {
 
     @Autowired

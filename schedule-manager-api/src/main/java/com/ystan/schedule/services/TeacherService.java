@@ -1,5 +1,7 @@
 package com.ystan.schedule.services;
 
+import com.ystan.schedule.enums.Day;
+import com.ystan.schedule.models.GroupDTO;
 import com.ystan.schedule.models.Teacher;
 import com.ystan.schedule.models.TeacherDTO;
 import com.ystan.schedule.services.common.CRUDService;
@@ -16,4 +18,6 @@ public interface TeacherService extends CRUDService<String, TeacherDTO>, FindEnt
     String addSubjectToTeacher(String teacherId, String subjectId);
 
     String dropSubjectFromTeacher(String teacherId, String subjectId);
+
+    List<TeacherDTO> findAvailable(Day day, Integer ordinalNumber, String schoolId, String subjectId);
 }

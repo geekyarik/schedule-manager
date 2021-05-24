@@ -3,6 +3,7 @@ package com.ystan.schedule.controllers;
 
 import com.ystan.schedule.models.ClassroomDTO;
 import com.ystan.schedule.models.GroupDTO;
+import com.ystan.schedule.requests.GetAvailableRequest;
 import com.ystan.schedule.services.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,14 @@ public class GroupControllerImpl {
     )
     public ResponseEntity<GroupDTO> getById(@PathVariable(name = "id") String id) {
         return new ResponseEntity<>(groupService.findById(id), HttpStatus.OK);
+    }
+
+    @GetMapping(
+            path = "/group/available",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<List<GroupDTO>> getAvailable(@RequestBody GetAvailableRequest request) {
+        return new ResponseEntity<>(groupService.findAvailable(request.getDay(), request.getOrdinalNumber(), request.getSchoolId()), HttpStatus.OK);
     }
 
     @GetMapping(

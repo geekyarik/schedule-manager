@@ -7,10 +7,12 @@ import com.ystan.schedule.models.Subject;
 import com.ystan.schedule.models.Teacher;
 import com.ystan.schedule.repositories.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
 import java.util.List;
 
+@Component
 public class TeacherPopulationHandler extends BaseScheduleGenerationHandler {
 
     @Autowired

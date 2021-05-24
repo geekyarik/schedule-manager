@@ -1,5 +1,6 @@
 package com.ystan.schedule.repositories;
 
+import com.ystan.schedule.enums.Day;
 import com.ystan.schedule.models.Lesson;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,13 +16,13 @@ public interface LessonRepository extends JpaRepository<Lesson, String> {
 
     List<Lesson> findByClassroomId(String schoolId);
 
-    List<Lesson> findByGroupAndDayOfWeek(String groupId, String dayOfWeek);
+    List<Lesson> findByGroupIdAndDayOfWeek(String groupId, Day dayOfWeek);
 
-    List<Lesson> findByTeacherAndDayOfWeek(String teacherId, String dayOfWeek);
+    List<Lesson> findByTeacherIdAndDayOfWeek(String teacherId, Day dayOfWeek);
 
-    List<Lesson> findByClassroomAndDayOfWeek(String classroomId, String dayOfWeek);
+    List<Lesson> findByClassroomIdAndDayOfWeek(String classroomId, Day dayOfWeek);
 
-    Integer countByTeacher(String teacherId);
+    Integer countByTeacherId(String teacherId);
 
-    Integer countByClassroom(String classroomId);
+    Integer countByClassroomId(String classroomId);
 }

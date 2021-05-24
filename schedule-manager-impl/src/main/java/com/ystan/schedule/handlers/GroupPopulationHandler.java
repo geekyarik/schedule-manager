@@ -6,7 +6,9 @@ import com.ystan.schedule.models.Group;
 import com.ystan.schedule.models.Rule;
 import com.ystan.schedule.repositories.GroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GroupPopulationHandler extends BaseScheduleGenerationHandler {
 
     @Override

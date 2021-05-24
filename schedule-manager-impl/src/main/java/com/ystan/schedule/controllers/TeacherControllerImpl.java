@@ -1,8 +1,10 @@
 package com.ystan.schedule.controllers;
 
 
+import com.ystan.schedule.models.ClassroomDTO;
 import com.ystan.schedule.models.TeacherDTO;
 import com.ystan.schedule.requests.AddSubjectToTeacherRequest;
+import com.ystan.schedule.requests.GetAvailableRequest;
 import com.ystan.schedule.services.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +35,14 @@ public class TeacherControllerImpl {
     )
     public ResponseEntity<List<TeacherDTO>> getTeachersBySubjectId(@PathVariable(name = "id") String id) {
         return new ResponseEntity<>(teacherService.findBySubjectId(id), HttpStatus.OK);
+    }
+
+    @GetMapping(
+            path = "/teacher/available",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<List<TeacherDTO>> getAvailable(@RequestBody GetAvailableRequest request) {
+        return new ResponseEntity<>(teacherService.findAvailable(request.getDay(), request.getOrdinalNumber(), request.getSchoolId(), request.getSubjectId()), HttpStatus.OK);
     }
 
     @GetMapping(

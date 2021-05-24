@@ -5,5 +5,6 @@ com\ystan\schedule\models\Lesson.class
 com\ystan\schedule\models\School.class
 com\ystan\schedule\models\Subject.class
 com\ystan\schedule\models\Group.class
+com\ystan\schedule\enums\Day.class
 com\ystan\schedule\models\Rule.class
 com\ystan\schedule\ModelsModuleConfig.class

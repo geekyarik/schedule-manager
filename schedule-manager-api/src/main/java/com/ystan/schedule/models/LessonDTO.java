@@ -1,5 +1,6 @@
 package com.ystan.schedule.models;
 
+import com.ystan.schedule.enums.Day;
 import com.ystan.schedule.models.common.EntityDTO;
 import lombok.Data;
 
@@ -8,7 +9,11 @@ public class LessonDTO extends EntityDTO {
 
     private String name;
 
-    private String startTime;
+    //private String startTime;
+
+    private Integer ordinalNumber;
+
+    private Day day;
 
     private SubjectDTO subject;
 

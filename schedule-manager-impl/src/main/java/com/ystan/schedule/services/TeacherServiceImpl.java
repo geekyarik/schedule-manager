@@ -1,7 +1,11 @@
 package com.ystan.schedule.services;
 
+import com.ystan.schedule.enums.Day;
 import com.ystan.schedule.mappers.TeacherMapper;
-import com.ystan.schedule.models.*;
+import com.ystan.schedule.models.School;
+import com.ystan.schedule.models.Teacher;
+import com.ystan.schedule.models.TeacherDTO;
+import com.ystan.schedule.models.User;
 import com.ystan.schedule.repositories.SchoolRepository;
 import com.ystan.schedule.repositories.SubjectRepository;
 import com.ystan.schedule.repositories.TeacherRepository;
@@ -75,6 +79,13 @@ public class TeacherServiceImpl implements TeacherService {
         subjectRepository.dropSubjectFromTeacher(teacherId, subjectId);
 
         return subjectId;
+    }
+
+    @Override
+    public List<TeacherDTO> findAvailable(Day day, Integer ordinalNumber, String schoolId, String subjectId) {
+        return teacherRepository.findAvailable(day.name(), ordinalNumber, schoolId, subjectId).stream()
+                .map(teacherMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     @Override

@@ -36,9 +36,10 @@ public class LessonMapper implements EntityMapper<Lesson, LessonDTO> {
     public LessonDTO toDto(Lesson source) {
         LessonDTO target = new LessonDTO();
 
-        BeanUtils.copyProperties(source, target, "startTime", "teacher", "classroom", "group", "subject");
+        //BeanUtils.copyProperties(source, target, "startTime", "teacher", "classroom", "group", "subject");
+        BeanUtils.copyProperties(source, target, "teacher", "classroom", "group", "subject");
 
-        target.setStartTime(dateTimeUtils.getString(source.getStartTime()));
+        //target.setStartTime(dateTimeUtils.getString(source.getStartTime()));
 
         ofNullable(source.getSubject())
                 .map(Subject::getId)
@@ -81,7 +82,7 @@ public class LessonMapper implements EntityMapper<Lesson, LessonDTO> {
                     .ifPresent(target::setSubject);
         }
 
-        target.setStartTime(dateTimeUtils.getLocalDateTime(source.getStartTime()));
+        //target.setStartTime(dateTimeUtils.getLocalDateTime(source.getStartTime()));
 
         ofNullable(source.getGroup())
                 .map(GroupDTO::getId)

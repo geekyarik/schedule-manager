@@ -1,5 +1,6 @@
 package com.ystan.schedule.repositories;
 
+import com.ystan.schedule.models.Group;
 import com.ystan.schedule.models.Teacher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -38,4 +39,15 @@ public interface TeacherRepository extends JpaRepository<Teacher, String> {
             nativeQuery = true
     )
     List<Teacher> findBySubjectIdAndSchoolId(String subjectId, String schoolId);
+
+
+    @Query(
+            value = "SELECT tch.* " +
+                    "FROM sm_teacher tch " +
+                    "LEFT JOIN sm_lesson les on tch.id = les.teacher_id " +
+                    "LEFT JOIN sm_subj_teach sst on tch.id = sst.teacher_id " +
+                    "WHERE tch.school_id = ?3 AND sst.subject_id = ?4 AND les.dayOfWeek != ?1 and les.ordinalNumber != ?2",
+            nativeQuery = true
+    )
+    List<Teacher> findAvailable(String day, Integer ordinalNumber, String schoolId, String subjectId);
 }

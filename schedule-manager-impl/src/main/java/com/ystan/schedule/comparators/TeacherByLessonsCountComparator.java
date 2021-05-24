@@ -16,8 +16,8 @@ public class TeacherByLessonsCountComparator implements Comparator<Teacher> {
     @Override
     public int compare(Teacher o1, Teacher o2) {
         return Integer.compare(
-                lessonRepository.countByTeacher(o1.getId()),
-                lessonRepository.countByTeacher(o2.getId())
+                lessonRepository.countByTeacherId(o1.getId()),
+                lessonRepository.countByTeacherId(o2.getId())
         );
     }
 }

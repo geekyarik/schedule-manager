@@ -1,6 +1,8 @@
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\common\FindEntityByIdFunc.java
+F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\RuleService.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\common\EntityDTO.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\ClassroomService.java
+F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\ScheduleService.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\SubjectDTO.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\ClassroomDTO.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\common\DateTimeUtils.java
@@ -8,6 +10,7 @@ F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\common\CRUDService.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\LessonService.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\GroupDTO.java
+F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\RuleDTO.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\GroupService.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\services\SubjectService.java
 F:\Spring Studying\projects\schedule-manager\schedule-manager-api\src\main\java\com\ystan\schedule\models\SchoolDTO.java
