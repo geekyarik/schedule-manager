@@ -32,7 +32,10 @@ export class ScheduleGenerationComponent implements OnInit {
   }
 
   saveRule() {
-    this.service.saveRule(this.form.value).subscribe(() => this.getRules());
+    this.service.saveRule(this.form.value).subscribe(() => {
+      this.form.reset();
+      this.getRules();
+    });
   }
 
   remove(rule: any) {

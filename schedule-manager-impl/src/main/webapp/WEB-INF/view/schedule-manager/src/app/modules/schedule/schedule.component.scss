@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.lesson {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.lesson-card {
+  cursor: pointer;
+  width: 100%;
+  min-width: 235px;
+  margin-bottom: 10px;
+}
+
+.filters-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.day-number {
+  @extend .title;
+}

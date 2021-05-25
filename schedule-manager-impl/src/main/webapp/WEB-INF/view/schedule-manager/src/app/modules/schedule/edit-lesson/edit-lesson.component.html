@@ -1,0 +1,84 @@
+<section class="container">
+  <h1 mat-dialog-title>{{ lesson?.name }}</h1>
+
+  <div mat-dialog-content>
+    <form [formGroup]="form" class="lesson-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Group</mat-label>
+        <input
+          type="text"
+          placeholder="Pick the Group"
+          matInput
+          formControlName="group"
+          [matAutocomplete]="group"
+        >
+        <mat-autocomplete
+          autoActiveFirstOption
+          #group="matAutocomplete"
+          [displayWith]="displayFn"
+          (optionSelected)="onOptionSelected($event, 'group')"
+        >
+          <mat-option *ngFor="let option of groups$ | async" [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Room</mat-label>
+        <input
+          type="text"
+          placeholder="Pick the Room"
+          matInput
+          formControlName="classroom"
+          [matAutocomplete]="preferredRoom"
+        >
+        <mat-autocomplete
+          autoActiveFirstOption
+          #preferredRoom="matAutocomplete"
+          [displayWith]="displayFn"
+          (optionSelected)="onOptionSelected($event, 'classroom')"
+        >
+          <mat-option *ngFor="let option of rooms$ | async" [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Teacher</mat-label>
+        <input
+          type="text"
+          placeholder="Pick the Teacher"
+          matInput
+          formControlName="teacher"
+          [matAutocomplete]="preferredTeacher"
+        >
+        <mat-autocomplete
+          autoActiveFirstOption
+          #preferredTeacher="matAutocomplete"
+          [displayWith]="displayFn"
+          (optionSelected)="onOptionSelected($event, 'teacher')"
+        >
+          <mat-option *ngFor="let option of teachers$ | async" [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div mat-dialog-actions align>
+    <button
+      mat-button
+      color="primary"
+      [mat-dialog-close]="form.value"
+      [disabled]="form.invalid"
+      cdkFocusInitial
+    >
+      SAVE
+    </button>
+
+    <button mat-button (click)="dialogRef.close()">CANCEL</button>
+  </div>
+</section>

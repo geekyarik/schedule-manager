@@ -1,0 +1,11 @@
+.lesson-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 450px;
+
+  & > mat-form-field {
+    width: 100%;
+  }
+}

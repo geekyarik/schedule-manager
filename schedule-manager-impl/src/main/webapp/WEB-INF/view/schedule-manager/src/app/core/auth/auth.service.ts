@@ -49,9 +49,13 @@ export class AuthService {
     return this.http.post('http://localhost:8080/register', body);
   }
 
-  logout() {
+  toLoginPage() {
     this.router.navigate(['login']);
-    this.isAuthenticated$.next(true);
+  }
+
+  logout() {
+    this.router.navigate(['schedule']);
+    this.isAuthenticated$.next(false);
     this.roles$.next([]);
     this.jwt$.next('');
     this.isAdmin$.next(false);

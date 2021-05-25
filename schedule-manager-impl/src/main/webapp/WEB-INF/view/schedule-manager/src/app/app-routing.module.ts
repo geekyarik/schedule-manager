@@ -17,12 +17,16 @@ const routes: Routes = [
   {
     path: 'schedule',
     component: ShellComponent,
-    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'board'
+      },
+      {
         path: 'admin',
-        loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
-        canActivate: [AdminGuard]
+        loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
       },
       {
         path: 'classrooms',
@@ -43,6 +47,10 @@ const routes: Routes = [
       {
         path: 'schedule-generation',
         loadChildren: () => import('./modules/schedule-generation/schedule-generation.module').then(m => m.ScheduleGenerationModule)
+      },
+      {
+        path: 'board',
+        loadChildren: () => import('./modules/schedule/schedule.module').then(m => m.ScheduleModule)
       }
     ]
   },

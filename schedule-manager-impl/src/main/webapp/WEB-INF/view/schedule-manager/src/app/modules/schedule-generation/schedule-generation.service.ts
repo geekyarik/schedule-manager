@@ -53,7 +53,8 @@ export class ScheduleGenerationService {
 
   generate() {
     return this.schoolService.school$.pipe(
-      concatMap((school: any) => this.http.get(`http://localhost:8080/schedule/generate?schoolId=${school?.id}`))
+      concatMap((school: any) => this.http.get(`http://localhost:8080/schedule/generate?schoolId=${school?.id}`)),
+      catchError(resp => of(resp))
     );
   }
 

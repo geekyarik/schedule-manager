@@ -7,8 +7,13 @@ import { AuthService } from '../../../core/auth';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isAuthenticated$ = this.authService.isAuthenticated$;
 
   constructor(private authService: AuthService) { }
+
+  toggleAuth() {
+    this.isAuthenticated$.value ? this.logout() : this.authService.toLoginPage();
+  }
 
   logout() {
     this.authService.logout();

@@ -1,0 +1,117 @@
+<section class="container">
+  <section class="schedule">
+    <div *ngFor="let day of week; index as dayIndex" class="day">
+      <div class="title">{{ day.day }}</div>
+
+      <div *ngFor="let slot of lessons; index as i" class="lesson">
+        <div *ngIf="!dayIndex" class="day-number">{{ i + 1 }}</div>
+
+        <mat-card
+          class="lesson-card"
+          [style.min-height]="(isAuthenticated$ | async) ? '152px' : '100px'"
+          (click)="editLesson(day, i)"
+        >
+          <ng-container *ngIf="day.value[i] as lesson">
+            <mat-card-header>
+              <mat-card-title>Subject: {{ lesson[0].subject.name }}</mat-card-title>
+              <mat-card-subtitle>Classroom: {{ lesson[0].classroom.name }}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+              <div class="content">
+                <div class="group">Group: {{ lesson[0].group.name }}</div>
+                <div class="teacher">Teacher: {{ lesson[0].teacher.firstName }} {{ lesson[0].teacher.lastName }}</div>
+              </div>
+            </mat-card-content>
+
+            <mat-card-actions *ngIf="isAuthenticated$ | async" align="end">
+              <button
+                mat-button
+                color="warn"
+                (click)="remove(lesson[0].id)"
+              >
+                REMOVE
+              </button>
+            </mat-card-actions>
+          </ng-container>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters-container">
+    <mat-card class="filters-card">
+      <mat-card-header>
+        <mat-card-title>
+          <div class="title">Filter Schedule By</div>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="form" class="filters-form">
+          <mat-form-field appearance="outline">
+            <mat-label>Group</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Group"
+              matInput
+              formControlName="group"
+              [matAutocomplete]="group"
+            >
+            <mat-autocomplete
+              autoActiveFirstOption
+              #group="matAutocomplete"
+              [displayWith]="displayFn"
+              (optionSelected)="onOptionSelected($event, 'group')"
+            >
+              <mat-option *ngFor="let option of groups$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Room</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Room"
+              matInput
+              formControlName="classroom"
+              [matAutocomplete]="preferredRoom"
+            >
+            <mat-autocomplete
+              autoActiveFirstOption
+              #preferredRoom="matAutocomplete"
+              [displayWith]="displayFn"
+              (optionSelected)="onOptionSelected($event, 'classroom')"
+            >
+              <mat-option *ngFor="let option of rooms$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Teacher</mat-label>
+            <input
+              type="text"
+              placeholder="Pick the Teacher"
+              matInput
+              formControlName="teacher"
+              [matAutocomplete]="preferredTeacher"
+            >
+            <mat-autocomplete
+              autoActiveFirstOption
+              #preferredTeacher="matAutocomplete"
+              [displayWith]="displayFn"
+              (optionSelected)="onOptionSelected($event, 'teacher')"
+            >
+              <mat-option *ngFor="let option of teachers$ | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</section>
