@@ -28,7 +28,7 @@ public class GroupControllerImpl {
         return new ResponseEntity<>(groupService.findById(id), HttpStatus.OK);
     }
 
-    @GetMapping(
+    @PostMapping(
             path = "/group/available",
             produces = MediaType.APPLICATION_JSON_VALUE
     )

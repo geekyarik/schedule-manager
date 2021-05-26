@@ -39,7 +39,7 @@ public class ClassroomControllerImpl {
         return new ResponseEntity<>(classroomService.findBySchoolId(schoolId), HttpStatus.OK);
     }
 
-    @GetMapping(
+    @PostMapping(
             path = "/classroom/available",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
