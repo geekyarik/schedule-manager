@@ -18,6 +18,7 @@
   justify-content: space-between;
   align-items: flex-start;
   flex: 1;
+  gap: 10px;
 }
 
 .lesson {
@@ -32,7 +33,6 @@
 .lesson-card {
   cursor: pointer;
   width: 100%;
-  min-width: 235px;
   margin-bottom: 10px;
 }
 
@@ -50,4 +50,8 @@
 
 .day-number {
   @extend .title;
+}
+
+.day {
+  flex: 1;
 }

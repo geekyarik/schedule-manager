@@ -36,7 +36,7 @@ export class AdminComponent implements OnInit {
   }
 
   createSchool() {
-    const id = this.school.id;
+    const id = this.school?.id;
     const body = {
       ...this.schoolForm.value,
       ...(id ? { id } : {})
@@ -46,6 +46,7 @@ export class AdminComponent implements OnInit {
       .subscribe(school => {
         this.showAddSchoolForm = false;
         this.school = school;
+        !id && this.getSchool();
       });
   }
 

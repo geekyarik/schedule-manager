@@ -9,7 +9,6 @@
         <mat-card
           class="lesson-card"
           [style.min-height]="(isAuthenticated$ | async) ? '152px' : '100px'"
-          (click)="editLesson(day, i)"
         >
           <ng-container *ngIf="day.value[i] as lesson">
             <mat-card-header>
@@ -25,6 +24,13 @@
             </mat-card-content>
 
             <mat-card-actions *ngIf="isAuthenticated$ | async" align="end">
+              <button
+                mat-button
+                color="primary"
+                (click)="editLesson(day, i)"
+              >
+                EDIT
+              </button>
               <button
                 mat-button
                 color="warn"

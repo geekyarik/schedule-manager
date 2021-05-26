@@ -58,7 +58,7 @@ export class ScheduleComponent implements OnInit {
         .afterClosed()
         .pipe(
           filter(Boolean),
-          concatMap(data => of(data))
+          concatMap(data => this.service.saveLesson(day, ordinalNumber, data))
         )
         .subscribe(() => this.restoreSchedule());
     }

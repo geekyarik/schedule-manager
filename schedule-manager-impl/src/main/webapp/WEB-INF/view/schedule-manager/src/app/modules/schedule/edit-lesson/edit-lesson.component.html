@@ -4,6 +4,44 @@
   <div mat-dialog-content>
     <form [formGroup]="form" class="lesson-form">
       <mat-form-field appearance="outline">
+        <mat-label>Day</mat-label>
+        <input
+          type="text"
+          placeholder="Pick the Day"
+          matInput
+          formControlName="day"
+          [matAutocomplete]="dayOfWeek"
+        >
+        <mat-autocomplete
+          autoActiveFirstOption
+          #dayOfWeek="matAutocomplete"
+        >
+          <mat-option *ngFor="let option of week" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ordinal Number</mat-label>
+        <input
+          type="text"
+          placeholder="Pick the Slot"
+          matInput
+          formControlName="ordinalNumber"
+          [matAutocomplete]="ordinalNumber"
+        >
+        <mat-autocomplete
+          autoActiveFirstOption
+          #ordinalNumber="matAutocomplete"
+        >
+          <mat-option *ngFor="let option of slots" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
         <mat-label>Group</mat-label>
         <input
           type="text"
@@ -16,7 +54,6 @@
           autoActiveFirstOption
           #group="matAutocomplete"
           [displayWith]="displayFn"
-          (optionSelected)="onOptionSelected($event, 'group')"
         >
           <mat-option *ngFor="let option of groups$ | async" [value]="option">
             {{option.name}}
@@ -37,7 +74,6 @@
           autoActiveFirstOption
           #preferredRoom="matAutocomplete"
           [displayWith]="displayFn"
-          (optionSelected)="onOptionSelected($event, 'classroom')"
         >
           <mat-option *ngFor="let option of rooms$ | async" [value]="option">
             {{option.name}}
@@ -57,8 +93,7 @@
         <mat-autocomplete
           autoActiveFirstOption
           #preferredTeacher="matAutocomplete"
-          [displayWith]="displayFn"
-          (optionSelected)="onOptionSelected($event, 'teacher')"
+          [displayWith]="displayTeacherFn"
         >
           <mat-option *ngFor="let option of teachers$ | async" [value]="option">
             {{option.name}}
@@ -75,6 +110,7 @@
       [mat-dialog-close]="form.value"
       [disabled]="form.invalid"
       cdkFocusInitial
+      (click)="save()"
     >
       SAVE
     </button>

@@ -35,7 +35,11 @@ export class ScheduleService {
   getAvailGroups(day: string, ordinalNumber: number): any {
     return this.schoolService.school$.pipe(
       concatMap(
-        (school: any) => this.http.get(`http://localhost:8080/group/available?day=${day}&ordinalNumber=${ordinalNumber}&schoolId=${school?.id}`)
+        (school: any) => this.http.post(`http://localhost:8080/schedule/group/available`, {
+          day,
+          ordinalNumber,
+          schoolId: school?.id
+        })
       )
     );
   }
@@ -43,7 +47,11 @@ export class ScheduleService {
   getAvailRooms(day: string, ordinalNumber: number): any {
     return this.schoolService.school$.pipe(
       concatMap(
-        (school: any) => this.http.get(`http://localhost:8080/classroom/available?day=${day}&ordinalNumber=${ordinalNumber}&schoolId=${school?.id}`)
+        (school: any) => this.http.post(`http://localhost:8080/schedule/classroom/available`, {
+          day,
+          ordinalNumber,
+          schoolId: school?.id
+        })
       )
     );
   }
@@ -51,7 +59,12 @@ export class ScheduleService {
   getAvailTeachers(day: string, ordinalNumber: number, subjectId: string): any {
     return this.schoolService.school$.pipe(
       concatMap(
-        (school: any) => this.http.get(`http://localhost:8080/teacher/available?day=${day}&ordinalNumber=${ordinalNumber}&subjectId=${subjectId}&schoolId=${school?.id}`)
+        (school: any) => this.http.post(`http://localhost:8080/schedule/teacher/available`, {
+          day,
+          ordinalNumber,
+          subjectId,
+          schoolId: school?.id
+        })
       ),
       map(teachers => _map((t: any) => ({ ...t, name: `${ t.firstName } ${ t.lastName }`}), teachers))
     );
@@ -69,7 +82,26 @@ export class ScheduleService {
     );
   }
 
-  saveLesson() {}
+  saveLesson(dayOfWeek: any, slot: number, value: any) {
+    const lesson = dayOfWeek?.value[slot]?.[0];
+    const { name, subject } = lesson;
+    const { day, classroom, group, ordinalNumber, teacher } = value;
+
+    return this.schoolService.school$.pipe(
+      concatMap(
+        (school: any) => this.http.post(`http://localhost:8080/schedule/lesson`, {
+          day,
+          name,
+          ordinalNumber,
+          subject: { id: subject.id },
+          group: { id: group.id },
+          classroom: { id: classroom.id },
+          teacher: { id: teacher.id },
+          schoolId: school?.id
+        })
+      )
+    );
+  }
 
   removeLesson(id: string) {
     return this.http.post(`http://localhost:8080/schedule/lesson/${id}/delete`, {}).pipe(
