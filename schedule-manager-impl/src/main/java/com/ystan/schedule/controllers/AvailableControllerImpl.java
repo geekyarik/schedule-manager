@@ -30,7 +30,7 @@ public class AvailableControllerImpl {
     @Autowired
     private GroupService groupService;
 
-    @GetMapping(
+    @PostMapping(
             path = "/classroom",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
@@ -39,7 +39,7 @@ public class AvailableControllerImpl {
     }
 
 
-    @GetMapping(
+    @PostMapping(
             path = "/teacher",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
@@ -48,7 +48,7 @@ public class AvailableControllerImpl {
     }
 
 
-    @GetMapping(
+    @PostMapping(
             path = "/group",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
